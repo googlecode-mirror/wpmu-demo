@@ -187,8 +187,8 @@ class SlideshowPluginPostType {
 		);
 
 		// Add support plugin message on edit slideshow
-		if(isset($_GET['action']) && strtolower($_GET['action']) == strtolower('edit'))
-			add_action('admin_notices', array(__CLASS__,  'supportPluginMessage'));
+//		if(isset($_GET['action']) && strtolower($_GET['action']) == strtolower('edit'))
+//			add_action('admin_notices', array(__CLASS__,  'supportPluginMessage'));
 	}
 
 	/**
