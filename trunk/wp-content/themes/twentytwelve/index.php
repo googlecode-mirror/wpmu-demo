@@ -18,6 +18,10 @@ get_header(); ?>
 
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
+		
+		<?php /* ----- Add Slideshow Picture ------ */ ?>
+		<div><?php do_action('slideshow_deploy', '25'); ?></div>
+
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
