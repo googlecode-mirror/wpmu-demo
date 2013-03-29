@@ -1,0 +1,4 @@
+*** Appply Changelog ***
+	
+2013.01.10 - version 1.0.0
+ * First release!
