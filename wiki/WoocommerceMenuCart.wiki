@@ -1,0 +1,8 @@
+#summary One-sentence summary of this page.
+
+=Automatically displays a shopping cart in your menu bar. =
+
+Add your content here.
+
+
+[http://wordpress.org/extend/plugins/woocommerce-menu-bar-cart/screenshots/]
