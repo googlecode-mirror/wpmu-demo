@@ -14,6 +14,50 @@ GLOBAL STYLES
 ----------------
 Add styles beneath this line that you want to be applied across your entire site */
 
+body {
+    background-image: url(./images/bg_main.png);
+}
+
+#header {
+    background: #FFFFFF;
+    max-width: 940px;
+}
+
+#header #logo {
+    margin: 25px 0 0 25px;
+}
+
+body.has-slider #header {
+    margin: 0 auto;
+    padding: 0;
+}
+
+#featured-slider {
+    background: #FFFFFF;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+#content {
+    background: #FFFFFF;
+}
+
+#header .header-left {
+    margin: 0;
+}
+
+#header .header-right {
+    margin: 25px 25px 0 0;
+}
+
+#main-nav {
+    height: 43px;
+    background-image: url("./images/buttons/button_bar_body.png");
+}
+
+#main-nav li {
+    padding: 5px 0;
+}
 
 /* 
 DESKTOP STYLES

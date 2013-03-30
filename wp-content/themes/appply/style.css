@@ -678,7 +678,6 @@ ul.nav li.li.current-menu-item a {
 }
 #header #logo {
   float: left;
-  margin-bottom: 1.618em;
 }
 #header #logo:active {
   padding-top: .236em;

@@ -150,9 +150,9 @@ if ( ! function_exists( 'woo_custom_styling' ) ) {
 		if ( is_array($settings) ) {
 			
 			// Add CSS to output
-			if ( $settings['body_color'] != '' ) {
-				$output .= 'body { background: ' . $settings['body_color'] . ' !important; }' . "\n";
-			}
+//			if ( $settings['body_color'] != '' ) {
+//				$output .= 'body { background: ' . $settings['body_color'] . ' !important; }' . "\n";
+//			}
 				
 			if ( $settings['body_img'] != '' ) {
 				$body_image = $settings['body_img'];
@@ -458,7 +458,7 @@ function woo_logo () {
 	global $woo_options;
 	if ( isset( $woo_options['woo_texttitle'] ) && $woo_options['woo_texttitle'] == 'true' ) return; // Get out if we're not displaying the logo.
 	
-	$logo = esc_url( get_template_directory_uri() . '/images/logo.png' );
+	$logo = esc_url( get_template_directory_uri() . '/images/logo_srikrung.png' );
 	if ( isset( $woo_options['woo_logo'] ) && $woo_options['woo_logo'] != '' ) { $logo = $woo_options['woo_logo']; }
 	if ( is_ssl() ) { $logo = str_replace( 'http://', 'https://', $logo ); }
 ?>
