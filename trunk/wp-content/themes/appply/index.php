@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 				'homepage_content_type' => 'posts',
 				'homepage_enable_testimonials' => 'true', 
 				'homepage_enable_intro_message' => 'true',
-				'homepage_number_of_features' => 3, 
+				'homepage_number_of_features' => 3,
 				'homepage_number_of_testimonials' => 3, 
 				'homepage_features_area_title' => '',
 				'homepage_testimonials_area_title' => sprintf( __( 'What people think of %s', 'woothemes' ), get_bloginfo( 'name' ) )
@@ -30,43 +30,44 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 ?>
 
     <div id="content" class="col-full">
-	<?php do_action('slideshow_deploy', '26'); ?>
-    	<?php woo_main_before(); ?>
-		
-		<section id="main" class="col-full fullwidth">
 
-			<?php
-				if ( is_home() && ! dynamic_sidebar( 'homepage' ) ) {
-					if ( 'true' == $settings['homepage_enable_features'] ) {
-						do_action( 'woothemes_features', array( 'size' => 60, 'per_row' => 3, 'limit' => $settings['homepage_number_of_features'] ) );
-					}
+        Content here..
 
-					if ( 'true' == $settings['homepage_enable_content'] ) {
-						switch ( $settings['homepage_content_type'] ) {
-							case 'page':
-							get_template_part( 'includes/specific-page-content' );
-							break;
-
-							case 'posts':
-							default:
-							get_template_part( 'includes/blog-posts' );
-							break;
-						}
-					}
-
-					if ( 'true' == $settings['homepage_enable_testimonials'] ) {
-						do_action( 'woothemes_testimonials', array( 'title' => $settings['homepage_testimonials_area_title'], 'per_row' => 3, 'limit' => $settings['homepage_number_of_testimonials'] ) );
-					}
-
-					if ( 'true' == $settings['homepage_enable_intro_message'] ) {
-						get_template_part( 'includes/intro-message' );
-					}
-				}
-			?>
-
-		</section><!-- /#main -->
-
-		<?php woo_main_after(); ?>
+<!--    	--><?php //woo_main_before(); ?>
+<!--		-->
+<!--		<section id="main" class="col-full fullwidth">-->
+<!--			--><?php
+//				if ( is_home() && ! dynamic_sidebar( 'homepage' ) ) {
+//					if ( 'true' == $settings['homepage_enable_features'] ) {
+//						do_action( 'woothemes_features', array( 'size' => 60, 'per_row' => 3, 'limit' => $settings['homepage_number_of_features'] ) );
+//					}
+//
+//					if ( 'true' == $settings['homepage_enable_content'] ) {
+//						switch ( $settings['homepage_content_type'] ) {
+//							case 'page':
+//							get_template_part( 'includes/specific-page-content' );
+//							break;
+//
+//							case 'posts':
+//							default:
+//							get_template_part( 'includes/blog-posts' );
+//							break;
+//						}
+//					}
+//
+//					if ( 'true' == $settings['homepage_enable_testimonials'] ) {
+//						do_action( 'woothemes_testimonials', array( 'title' => $settings['homepage_testimonials_area_title'], 'per_row' => 3, 'limit' => $settings['homepage_number_of_testimonials'] ) );
+//					}
+//
+//					if ( 'true' == $settings['homepage_enable_intro_message'] ) {
+//						get_template_part( 'includes/intro-message' );
+//					}
+//				}
+//			?>
+<!---->
+<!--		</section><!-- /#main -->
+<!---->
+<!--		--><?php //woo_main_after(); ?>
     </div><!-- /#content -->
 		
 <?php get_footer(); ?>
