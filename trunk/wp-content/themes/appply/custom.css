@@ -59,6 +59,13 @@ body.has-slider #header {
     padding: 5px 0;
 }
 
+/* footer */
+
+#footer-copy
+{
+    margin:0 auto;
+}
+
 /* 
 DESKTOP STYLES
 -----------------
