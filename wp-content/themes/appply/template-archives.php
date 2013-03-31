@@ -1,4 +1,4 @@
-<?php
+s<?php
 if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Template Name: Archives Page
