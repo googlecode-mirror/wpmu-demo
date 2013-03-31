@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					<div id="sitemap-categories" class="fl" style="width:50%">												  	    
 			            <h3><?php _e( 'Categories', 'woothemes' ); ?></h3>
 			            <ul>
-		    	            <?php wp_list_categories( 'title_li=&hierarchical=0&show_count=1' ); ?>	
+		    	            <?php wp_list_categories( 'title_li=&hierarchical=0&show_count=1' ); ?>
 		        	    </ul>
 	        	    </div><!--/#sitemap-categories-->
 	        	    
