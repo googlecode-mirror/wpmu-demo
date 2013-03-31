@@ -31,8 +31,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
     <div id="content" class="col-full">
 
-        Content here..
-        
+        <div id="product-recommend">
+<!--                <img src="--><?php //echo esc_url( get_template_directory_uri() . '/images/ProductRecommentFrame.png' ); ?><!--" alt=""/>-->
+        </div>
+
+        <div id="agent-recommend">
+<!--            <img src="--><?php //echo esc_url( get_template_directory_uri() . '/images/agentRecommentFrame.png' ); ?><!--" alt=""/>-->
+        </div>
+
         <div id="banner-footer">
             <div id="banner-read-btn">
                 <img src="<?php echo esc_url( get_template_directory_uri() . '/images/buttons/readeDetailButton.png' ); ?>" alt=""/>
