@@ -42,10 +42,10 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 		</section><!-- /#footer-widgets  -->
 <?php } // End IF Statement ?>
-		<footer id="footer" class="col-full">
+		<footer id="footer" class="col-full" style="background: #eaeaea;>
 
 <!--            default theme-->
-<!--			    <div id="footer-left" class="col-left">-->
+<!--			    <div id="footer-left" class="col-left">
 <!---->
 <!--				--><?php //if( isset( $woo_options['woo_footer_left'] ) && $woo_options['woo_footer_left'] == 'true' ) {
 //						echo stripslashes( $woo_options['woo_footer_left_text'] );
@@ -66,8 +66,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 <!--				</div>-->
 
 <!--            New custom-->
-            <div id="footer-left" class="col-left">
-                <div>
+            <div id="footer-left" class="col-left" style="padding: 40px;">
+                <div id="contact-address" style="display: block; float: left">
                     <img src="<?php echo esc_url( get_template_directory_uri() . '/images/logo_gray_03.png' ); ?>"  />
                     <p class="copyright ">ซอยเอกชัย 83/1 แขวงบางบอน</p>
                     <p class="copyright ">เขตบางบอน กทม 10150น</p>
@@ -75,9 +75,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
                     <p class="copyright ">Fax: 02-899-4994น</p>
                     <p class="copyright ">Email : sale_group@srikrungbroker.co.th</p>
                 </div>
-
-
-
+                <div id="sitemap-main" style="display: block; float: left;">
+                    <ul>
+                        <?php wp_list_pages( 'depth=0&sort_column=menu_order&title_li=' ); ?>
+                    </ul>
+                </div>
             </div>
 
             <div id=footer-center>
