@@ -168,7 +168,7 @@ INDEX
   
   }
   #navigation ul.nav > li {
-    margin: 0 1px;
+    margin: 0;
   }
   #navigation ul.nav > li a {
     color: #ffffff;
@@ -339,7 +339,7 @@ INDEX
   #main.fullwidth,
   .layout-full #main,
   .col-full {
-    max-width: 940px;
+    max-width: 960px;
     width: 100%;
     margin: 0 auto;
   }
