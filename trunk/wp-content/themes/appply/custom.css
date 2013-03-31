@@ -40,6 +40,7 @@ body.has-slider #header {
 
 #content {
     background: #FFFFFF;
+    overflow: auto;
 }
 
 #header .header-left {
@@ -89,6 +90,21 @@ body.has-slider #header {
     margin-top: 40px;
 }
 
+#product-recommend
+{
+    margin:  20px 15px;
+    background-image: url("images/ProductRecommentFrame.png");
+    background-repeat: no-repeat;
+    height: 252px;
+}
+
+#agent-recommend
+{
+    margin: 30px 15px ;
+    background-image: url("images/agentRecommentFrame.png");
+    background-repeat: no-repeat;
+    height: 252px;
+}
 /* 
 DESKTOP STYLES
 -----------------

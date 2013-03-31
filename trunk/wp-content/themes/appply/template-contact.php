@@ -196,7 +196,7 @@ jQuery(document).ready(function() {
                             </li>
 
                             <li class="textarea"><label for="commentsText"><?php _e( 'Message', 'woothemes' ); ?></label>
-                                <textarea name="comments" id="commentsText" rows="20" cols="30" class="requiredField"><?php if( isset( $_POST['comments'] ) ) { echo esc_textarea( $_POST['comments'] ); } ?></textarea>
+                                <textarea name="comments" id="commentsText" rows="10" cols="10" class="requiredField"><?php if( isset( $_POST['comments'] ) ) { echo esc_textarea( $_POST['comments'] ); } ?></textarea>
                                 <?php if( $commentError != '' ) { ?>
                                     <span class="error"><?php echo $commentError; ?></span>
                                 <?php } ?>
