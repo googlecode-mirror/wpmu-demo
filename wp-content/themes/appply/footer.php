@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  */
 	global $woo_options;
 ?>
-	
+
 <div id="footer-wrapper">
 
 <?php
@@ -79,7 +79,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 <div id="footer-copy" >
     <img src="<?php echo esc_url( get_template_directory_uri() . '/images/copyright_10.png' ); ?>"  />
 </div>
-
 <?php wp_footer(); ?>
 <?php woo_foot(); ?>
 </body>
