@@ -813,7 +813,7 @@ body.has-top-section #header {
 }
 /* 2.6 Footer */
 #footer-wrapper {
-  padding: 4.236em 0 2.618em;
+  /*padding: 4.236em 0 2.618em;*/
  /* background: #f1f1f1;
   border-top: 1px solid #d3d3d3;
   box-shadow: inset 0 1px 5px 1px #d8d8d8;

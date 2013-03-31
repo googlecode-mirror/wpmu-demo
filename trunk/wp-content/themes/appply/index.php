@@ -32,6 +32,12 @@ if ( ! defined( 'ABSPATH' ) ) exit;
     <div id="content" class="col-full">
 
         Content here..
+        
+        <div id="banner-footer">
+            <div id="banner-read-btn">
+                <img src="<?php echo esc_url( get_template_directory_uri() . '/images/buttons/readeDetailButton.png' ); ?>" alt=""/>
+            </div>
+        </div>
 
 <!--    	--><?php //woo_main_before(); ?>
 <!--		-->

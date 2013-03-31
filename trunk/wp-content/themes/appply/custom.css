@@ -63,10 +63,30 @@ body.has-slider #header {
 
 #footer-copy
 {
-    position: absolute;
-    width: 960px;
-    left: 50%;
-    margin-left: -480px;
+    max-width: 940px;
+    margin: 0 auto;
+    background: #8dc433;
+}
+#footer-copy p {
+    padding: 8px;
+    text-align: center;
+    color: #000000;
+}
+
+#banner-footer {
+    margin: 20px 4px;
+    overflow: auto;
+    background-image: url("images/ApplyAgentBanner.png");
+    background-repeat: no-repeat;
+    height: 113px;
+}
+
+#banner-footer #banner-read-btn {
+    float: right;
+    position: relative;
+    display: block;
+    margin-right: 25px;
+    margin-top: 40px;
 }
 
 /* 

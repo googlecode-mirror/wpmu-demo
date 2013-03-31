@@ -66,28 +66,28 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 <!--				</div>-->
 
 <!--            New custom-->
-            <div id="footer-left" class="col-left" style="padding: 40px;">
-                <div id="contact-address" style="display: block; float: left">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/images/logo_gray_03.png' ); ?>"  />
-                    <p class="copyright ">ซอยเอกชัย 83/1 แขวงบางบอน</p>
-                    <p class="copyright ">เขตบางบอน กทม 10150น</p>
-                    <p class="copyright ">Tel: 02-867-3888ม 02-867-380-04</p>
-                    <p class="copyright ">Fax: 02-899-4994น</p>
-                    <p class="copyright ">Email : sale_group@srikrungbroker.co.th</p>
+            <div id="footer-left" class="col-left" style="width: 65%">
+                <div id="contact-address" style="display: block; float: left; width: 306px; margin: 30px 0 30px 60px">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/images/logo_gray_03.png' ); ?>" />
+                    <div style="margin-top: 20px;">
+                        <p class="copyright ">ซอยเอกชัย 83/1 แขวงบางบอน</p>
+                        <p class="copyright ">เขตบางบอน กทม 10150</p>
+                        <p class="copyright ">Tel: 02-867-3888ม 02-867-380-04</p>
+                        <p class="copyright ">Fax: 02-899-4994</p>
+                        <p class="copyright ">Email : sale_group@srikrungbroker.co.th</p>
+                    </div>
                 </div>
-                <div id="sitemap-main" style="display: block; float: left;">
+                <div id="sitemap-main" style="display: block; float: left; width: 180px; margin: 30px">
+                    <h4>Sitemap</h4>
                     <ul>
                         <?php wp_list_pages( 'depth=0&sort_column=menu_order&title_li=' ); ?>
                     </ul>
                 </div>
             </div>
 
-            <div id=footer-center>
-
-            </div>
-
 			<div id="footer-right" class="col-right">
-				<div class="block">
+				<div class="block" style="margin: 30px 30px 0 0;">
+                    <h4>Like us on Facebook</h4>
 			        <?php woo_sidebar( 'footer-right' ); ?>
                        <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fplatform&amp;width=292&amp;height=290&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color&amp;header=true&amp;appId=193435037371900" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:290px; background-color: #ffffff" allowTransparency="false"></iframe>
 				</div>
@@ -95,14 +95,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 		</footer><!-- /#footer  -->
 
+        <!-- footer -->
+        <div id="footer-copy" >
+            <p>Copyright 2013 - Srikrung Co., Ltd. - All Rights Reserved.</p>
+        </div>
+
 	</div><!-- /#footer-wrapper -->
 
 </div><!-- /#wrapper -->
-
-<!-- footer -->
-<div id="footer-copy" >
-    <img src="<?php echo esc_url( get_template_directory_uri() . '/images/copyright_10.png' ); ?>"  />
-</div>
 
 <?php wp_footer(); ?>
 <?php woo_foot(); ?>
