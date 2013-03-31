@@ -63,7 +63,10 @@ body.has-slider #header {
 
 #footer-copy
 {
-    margin:0 auto;
+    position: absolute;
+    width: 960px;
+    left: 50%;
+    margin-left: -480px;
 }
 
 /* 
