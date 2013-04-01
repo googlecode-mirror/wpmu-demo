@@ -1,0 +1,74 @@
+*** Sliding Changelog ***
+
+2013-01-04 - version 1.5
+ * style.css 
+ * styles/*.css - Styling preparation for WooCommerce 2.0 standardised class names (.woocommerce-), fixed upsells and shipping method selection bugs on cart
+
+2012.12.06 - version 1.4
+ * style.css - Styling preparation for WooCommerce 2.0
+ * includes/theme-woocommerce.php - disable WooCommerce lightbox when prettyPhoto is enabled
+
+2012.12.04 - version 1.3.1
+ * template-sale.php - Now displays all products on sale without pagination / sorting
+
+2012.10.16 - version 1.3
+ * template-business.php - Business template and compatibility with WooSlider, Features and Testimonials plugins
+
+2012.09.07 - version 1.2.4
+ * fixed subcategory thumb size on archives
+ * fixed bug causing related products to display twice
+
+2012.08.13 - version 1.2.3
+ * style.css - fixed vertical scrollbar issue on homepage carousels
+
+2012.08.09 - version 1.2.2
+ * header.php
+   includes/theme-woocommerce.php cart count now uses get_cart_contents_count(). Requires WooCommerce 1.6.2+
+
+2012.07.31 - version 1.2.1
+ * images/ico-subscribe-social.png - Updated Twitter Icon
+ * images/twitter.png - Updated Twitter Icon
+ * includes/widget/widget-woo-twitter.php - Added "Twitter" text for default widget title
+
+2012.07.19 - version 1.2
+ * template-sale.php - now uses content-product instead of loop-shop. Requires WooCommerce 1.6.0+
+
+2012.06.18 - version 1.1.8
+ * index.php - respect visibility setting and tweak markup
+
+2012.05.14 - version 1.1.7
+ * includes/theme-js.php
+   includes/js/jquery.jscrollpane.js - replaced slickscroll with jscrollpane for homepage recent / best-seller sliders
+ * includes/js/jquery.mousewheel.js - updated to latest version
+
+2012.05.14 - version 1.1.6
+ * index.php new and best selling products now use catalog images
+
+2012.04.17 - version 1.1.5
+ * template-sale.php - preparation for WooCommerce 1.5.4
+
+2012.03.01 - version 1.1.4
+ * style.css improved error message style when containing a list
+ 
+2012.02.20 - version 1.1.3
+ * /includes/theme-woocommerce.php - Update search fragment to use & instead of ?, in accordance with WooFramework update (requires WooFramework V5.1.3 or higher).
+
+2012.02.14 - version 1.1.2
+ * includes/theme-woocommerce.php Added the "Add the main description after the excerpt" code back after discovering the intended use.
+
+2012.02.12 - version 1.1.1
+ * includes/theme-woocommerce.php Removed the "Add the main description after the excerpt" code.
+	
+2012.02.01 - version 1.1
+ * index.php WooCommerce 1.4 preparation; replaced depreciated classes and updated custom field IDs
+ * style.css improved product category count style
+ * header.php removed tabbed characters which can display strange glyphs 
+ * header.php
+   search.php
+   includes/theme-options.php added option to make header search products or posts
+
+2011.12.14 - version 1.0.1
+ * functions.php - Integrate PressTrends key.
+	
+2011.12.08 - version 1.0
+ * First release!
