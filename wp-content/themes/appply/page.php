@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 ?>
        
     <div id="content" class="page col-full">
-    
+
     	<?php woo_main_before(); ?>
     	
 		<section id="main" class="col-left"> 			
