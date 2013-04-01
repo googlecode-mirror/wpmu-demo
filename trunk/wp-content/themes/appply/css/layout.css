@@ -215,7 +215,7 @@ INDEX
     background-clip: padding-box;
   }
   #navigation ul.nav ul {
-    background: #3f354a;
+    background: #4f4e4e;
     -webkit-border-radius: 0.327em;
     border-radius: 0.327em;
     -moz-background-clip: padding;
@@ -228,7 +228,7 @@ INDEX
     font-size: .9em;
   }
   #navigation ul.nav ul li a:hover {
-    background: #322a3b;
+    background: #a1aba5;
   }
   #navigation ul.nav ul li:last-child a {
     -webkit-border-bottom-left-radius: 0.327em;
