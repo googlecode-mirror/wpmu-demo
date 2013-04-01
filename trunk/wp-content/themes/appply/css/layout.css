@@ -321,8 +321,8 @@ INDEX
   }
   body.has-slider #header,
   body.has-top-section #header {
-    margin: 0;
-    padding: 3.631em 2em 0;
+    margin: 0 auto;
+    padding: 0;
   }
   #top-section .col-full {
     padding: 0;

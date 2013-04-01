@@ -21,15 +21,12 @@ body {
 #header {
     background: #FFFFFF;
     max-width: 960px;
+    margin: 0 auto;
+    padding: 0;
 }
 
 #header #logo {
     margin: 20px 0 0 15px;
-}
-
-body.has-slider #header {
-    margin: 0 auto;
-    padding: 0;
 }
 
 #featured-slider {
@@ -48,7 +45,7 @@ body.has-slider #header {
 }
 
 #header .header-right {
-    margin: 25px 15px 0 0;
+    margin: 20px 15px 20px 0;
 }
 
 #main-nav {
@@ -58,6 +55,27 @@ body.has-slider #header {
 
 #main-nav li {
     padding: 7px 0;
+}
+
+.slide-content .entry {
+    margin-top: -22px;
+    margin-bottom: -22px;
+}
+
+#top-section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px 0;
+    background: #568215;
+}
+
+#top-section header h1 {
+    margin-left: 30px;
+    width: 500px;
+}
+
+#top-section #breadcrumbs {
+    margin-right: 30px;
 }
 
 /* footer */
@@ -105,6 +123,13 @@ body.has-slider #header {
     background-repeat: no-repeat;
     height: 252px;
 }
+
+/* Layout */
+.layout-full #main {
+    margin: 30px;
+    width: 900px;
+}
+
 /* 
 DESKTOP STYLES
 -----------------
