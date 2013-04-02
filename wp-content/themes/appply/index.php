@@ -36,15 +36,15 @@ if ( ! defined( 'ABSPATH' ) ) exit;
                 <?php
                 $args = array(
                     'post_type' => 'product',
-                    'posts_per_page' => 12
+                    'posts_per_page' => 4
                 );
                 $loop = new WP_Query( $args );
                 if ( $loop->have_posts() ) {
                     while ( $loop->have_posts() ) : $loop->the_post();
 //                        woocommerce_get_template_part( 'content', 'product' );
 //                        $product = new WC_Product( $loop->post->ID );
-//                        echo $product->get_title();
-                    echo "<li><div>" . $product->get_image() . "</div><div>" . $product->get_title() . "</div></li>";
+                       // echo $loop->post->guid;
+                    echo "<li><div><a href='" . $loop->post->guid . "'>" . $product->get_image() . "</a></div><div><a href='".$loop->post->guid."'>" . $product->get_title() . "</a></div></li>";
                     endwhile;
                 } else {
                     echo __( 'No products found' );
