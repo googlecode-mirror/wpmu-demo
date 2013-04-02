@@ -39,7 +39,7 @@ woo_head();
             <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icons/cart_basket.png' ); ?>" />
             <span style="color: #d0dfe9">
                 <a class="cart-content" href="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>"><span><?php echo $woocommerce->cart->get_cart_contents_count();?></span></a>
-                item(s) - 0.00 THB
+                item(s) - <span><?php echo $woocommerce->cart->get_total(); ?></span>
             </span>
         </div>
     </div>
