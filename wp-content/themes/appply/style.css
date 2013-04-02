@@ -3303,7 +3303,7 @@ img.ui-datepicker-trigger {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  border: 5px solid #000;
+  border: 5px solid #FFFFFF;
   background: #000;
   cursor: pointer;
 }
@@ -3311,5 +3311,5 @@ img.ui-datepicker-trigger {
   background: #fafafa;
 }
 #featured-slider .flex-control-nav li a.flex-active {
-  background: #fafafa;
+  background: #7ba723;
 }

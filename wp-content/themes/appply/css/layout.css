@@ -484,6 +484,7 @@ INDEX
   #featured-slider .flex-control-nav {
     width: auto;
     bottom: 2em;
+    margin: 0px 440px -40px 0;
   }
   /* 8. HOMEPAGE */#main .widget_woothemes_features .feature {
     width: 30%;
