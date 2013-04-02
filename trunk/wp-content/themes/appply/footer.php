@@ -70,11 +70,18 @@ if ( ! defined( 'ABSPATH' ) ) exit;
                 <div id="contact-address" style="display: block; float: left; width: 306px; margin: 30px 0 30px 60px">
                     <img src="<?php echo esc_url( get_template_directory_uri() . '/images/logo_gray_03.png' ); ?>" />
                     <div style="margin-top: 20px;">
-                        <p class="copyright ">ซอยเอกชัย 83/1 แขวงบางบอน</p>
-                        <p class="copyright ">เขตบางบอน กทม 10150</p>
-                        <p class="copyright ">Tel: 02-867-3888ม 02-867-380-04</p>
-                        <p class="copyright ">Fax: 02-899-4994</p>
-                        <p class="copyright ">Email : sale_group@srikrungbroker.co.th</p>
+<!--                        <p class="copyright ">ซอยเอกชัย 83/1 แขวงบางบอน</p>-->
+<!--                        <p class="copyright ">เขตบางบอน กทม 10150</p>-->
+<!--                        <p class="copyright ">Tel: 02-867-3888ม 02-867-380-04</p>-->
+<!--                        <p class="copyright ">Fax: 02-899-4994</p>-->
+<!--                        <p class="copyright ">Email : sale_group@srikrungbroker.co.th</p>-->
+
+                        <ul>
+                            <?php if (isset($woo_options['woo_contact_title']) && $woo_options['woo_contact_title'] != '' ) { ?><li><?php echo nl2br( esc_html( $woo_options['woo_contact_address'] ) ); ?></li><?php } ?>
+                            <?php if (isset($woo_options['woo_contact_number']) && $woo_options['woo_contact_number'] != '' ) { ?><li><?php _e('Tel:','woothemes'); ?> <?php echo esc_html( $woo_options['woo_contact_number'] ); ?></li><?php } ?>
+                            <?php if (isset($woo_options['woo_contact_fax']) && $woo_options['woo_contact_fax'] != '' ) { ?><li><?php _e('Fax:','woothemes'); ?> <?php echo esc_html( $woo_options['woo_contact_fax'] ); ?></li><?php } ?>
+                            <?php if (isset($woo_options['woo_contactform_email']) && $woo_options['woo_contactform_email'] != '' ) { ?><li><?php _e('Email:','woothemes'); ?> <a href="mailto:<?php echo esc_attr( $woo_options['woo_contactform_email'] ); ?>"><?php echo esc_html( $woo_options['woo_contactform_email'] ); ?></a></li><?php } ?>
+                        </ul>
                     </div>
                 </div>
                 <div id="sitemap-main" style="display: block; float: left; width: 180px; margin: 30px">
