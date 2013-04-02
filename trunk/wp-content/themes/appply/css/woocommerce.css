@@ -731,7 +731,9 @@ ul.products li.product a .more-info {
 }
 .single-product .woocommerce_tabs .panel,
 .single-product .woocommerce-tabs .panel {
-  padding: 0 2em;
+
+  margin: 0 5px;
+  padding: 5 2em;
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
 
@@ -1218,10 +1220,14 @@ table.cart .product-thumbnail img {
   }
   .single-product .images {
     float: left;
+      margin-right: 30px;
   }
   .single-product .summary {
     float: right;
+    margin-right: 30px;
+    margin-top: 20px;
     width: 45%;
+
   }
   .single-product .summary .price {
     margin: 0 0 .857em;
