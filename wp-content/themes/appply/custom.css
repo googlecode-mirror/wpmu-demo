@@ -130,6 +130,19 @@ body {
     width: 900px;
 }
 
+#product-recommend ul.slide-products {
+    list-style: none;
+    margin: 0 20px;
+}
+#product-recommend ul.slide-products li {
+    display: inline-block;
+    width: 200px;
+    margin-top: 80px;
+    /*background-color: #c7d9ac;*/
+    font-size: 13px;
+    text-align: center;
+    padding: 5px;
+}
 /* 
 DESKTOP STYLES
 -----------------

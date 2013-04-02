@@ -32,7 +32,25 @@ if ( ! defined( 'ABSPATH' ) ) exit;
     <div id="content" class="col-full">
 
         <div id="product-recommend">
-<!--                <img src="--><?php //echo esc_url( get_template_directory_uri() . '/images/ProductRecommentFrame.png' ); ?><!--" alt=""/>-->
+            <ul class="slide-products">
+                <?php
+                $args = array(
+                    'post_type' => 'product',
+                    'posts_per_page' => 12
+                );
+                $loop = new WP_Query( $args );
+                if ( $loop->have_posts() ) {
+                    while ( $loop->have_posts() ) : $loop->the_post();
+//                        woocommerce_get_template_part( 'content', 'product' );
+//                        $product = new WC_Product( $loop->post->ID );
+//                        echo $product->get_title();
+                    echo "<li><div>" . $product->get_image() . "</div><div>" . $product->get_title() . "</div></li>";
+                    endwhile;
+                } else {
+                    echo __( 'No products found' );
+                }
+                ?>
+            </ul><!--/.products-->
         </div>
 
         <div id="agent-recommend">
