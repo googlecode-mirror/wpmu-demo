@@ -464,14 +464,17 @@ function woo_maps_contact_output($args){
 	}
 	$extra_params = ',{travelMode:G_TRAVEL_MODE_WALKING,avoidHighways:true '.$locale.'}';
 	
-	if(empty($map_height)) { $map_height = 250;}
-	
-	if(is_home() && !empty($featured_h) && !empty($featured_w)){
-	?>
-    <div id="single_map_canvas" style="width:<?php echo $featured_w; ?>px; height: <?php echo $featured_h; ?>px"></div>
-    <?php } else { ?> 
-    <div id="single_map_canvas" style="width:100%; height: <?php echo $map_height; ?>px"></div>
-    <?php } ?>
+//	if(empty($map_height)) { $map_height = 250;}
+//
+//	if(is_home() && !empty($featured_h) && !empty($featured_w)){
+//	?>
+<!--    <div id="single_map_canvas" style="width:--><?php //echo $featured_w; ?><!--px; height: --><?php //echo $featured_h; ?><!--px"></div>-->
+<!--    --><?php //} else { ?><!-- -->
+<!--    <div id="single_map_canvas" style="width:100%; height: --><?php //echo $map_height; ?><!--px"></div>-->
+<!--    --><?php //} ?>
+
+<!--Map custom by Dash-->
+    <div id="single_map_canvas" style="width:400px; height:320px; float: right"></div>
     <script type="text/javascript">
 		jQuery(document).ready(function(){
 			function initialize() {
