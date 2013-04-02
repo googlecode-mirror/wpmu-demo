@@ -1934,7 +1934,7 @@ body.has-subscribe-connect #post-author {
 #main h5,
 #main h6 {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
+  /*font-weight: 300;*/
 }
 /* Features Widget */
 .widget_woothemes_features .feature {
