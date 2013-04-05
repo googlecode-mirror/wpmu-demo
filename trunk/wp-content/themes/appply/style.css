@@ -2352,7 +2352,7 @@ h3.archive_year {
 #contact-page ol.forms {
   float: left;
   list-style: none;
-  width: 100%;
+  width: 40%;
 }
 #contact-page ol.forms li {
   clear: both;

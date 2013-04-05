@@ -388,8 +388,10 @@ INDEX
     float: left;
   }
   .page-template-template-contact-php .location-twitter #office-location {
-    width: 48%;
-    margin: 0;
+    /*width: 48%;*/
+    /*margin: 0;*/
+    float: right;
+    margin-right: 75px;
   }
   .page-template-template-contact-php .location-twitter .contact-social {
     float: right;
