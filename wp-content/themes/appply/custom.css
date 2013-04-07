@@ -28,8 +28,19 @@ body {
 #top-login-bar {
     font-size: 13px;
 }
+#top-login-bar-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: right;
+    padding: 2px;
+}
 #form-login-bar {
     display: inline-block;
+    margin: 0;
+}
+
+#welcome-msg {
+    color: #D0DFE9;
 }
 
 #form-login-bar .submit-btn {

@@ -19,6 +19,10 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 <?php woo_meta(); ?>
 <link rel="pingback" href="<?php echo esc_url( get_bloginfo( 'pingback_url' ) ); ?>" />
 <?php
+/* Load Css reset for support different browser */
+wp_register_style( 'reset-stylesheet', get_template_directory_uri() . '/css/reset.css' );
+wp_enqueue_style( 'reset-stylesheet' );
+
 wp_head();
 woo_head();
 ?>
@@ -27,8 +31,9 @@ woo_head();
 <?php woo_top(); ?>
 
 <div id="top-login-bar" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/images/top_login_bar.png' ); ?>); height: 37px;">
-    <div style="max-width: 960px; margin: 0 auto; text-align: right;">
+    <div id="top-login-bar-wrapper">
         <div style="display: inline-block; padding: 2px;">
+            <?php if ( ! is_user_logged_in() ) : ?>
             <form action="./wp-login.php" method="post" id="form-login-bar">
                 <span style="color: #d0dfe9">Member Login : </span>
                 <input type="text" name="log" id="username-input" alt="username"/>
@@ -37,6 +42,10 @@ woo_head();
                 <input type="image" class="submit-btn" src="<?php echo esc_url(get_template_directory_uri() . '/images/buttons/loginBt.png'); ?>" />
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/images/buttons/applyToAgentBt.png'); ?>"/>
             </form>
+            <?php else :?>
+            <span id="welcome-msg">ยินดีต้อนรับ : <?php echo get_current_user() ?></span>
+            <span>(<a href="<?php echo wp_logout_url() ?>">Logout</a>)</span>
+            <?php endif ?>
         </div>
         <div style="display: inline-block; position: relative;">
             <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icons/cart_basket.png' ); ?>" />
