@@ -25,6 +25,17 @@ body {
     padding: 0;
 }
 
+#top-login-bar {
+    font-size: 13px;
+}
+#form-login-bar {
+    display: inline-block;
+}
+
+#form-login-bar .submit-btn {
+    vertical-align: bottom;
+}
+
 #header #logo {
     margin: 20px 0 0 15px;
 }

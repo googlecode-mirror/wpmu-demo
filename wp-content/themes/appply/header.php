@@ -29,11 +29,14 @@ woo_head();
 <div id="top-login-bar" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/images/top_login_bar.png' ); ?>); height: 37px;">
     <div style="max-width: 960px; margin: 0 auto; text-align: right;">
         <div style="display: inline-block; padding: 2px;">
-            <span style="color: #d0dfe9">Member Login : </span>
-            <input type="text" name="username" id="username-input" alt="username"/>
-            <input type="text" name="password" id="password-input" alt="password"/>
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/images/buttons/loginBt.png'); ?>"/>
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/images/buttons/applyToAgentBt.png'); ?>"/>
+            <form action="./wp-login.php" method="post" id="form-login-bar">
+                <span style="color: #d0dfe9">Member Login : </span>
+                <input type="text" name="log" id="username-input" alt="username"/>
+                <input type="password" name="pwd" id="password-input" alt="password"/>
+                <input type="hidden" name="redirect_to" value="<?php echo get_home_url() ?>" />
+                <input type="image" class="submit-btn" src="<?php echo esc_url(get_template_directory_uri() . '/images/buttons/loginBt.png'); ?>" />
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/images/buttons/applyToAgentBt.png'); ?>"/>
+            </form>
         </div>
         <div style="display: inline-block; position: relative;">
             <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icons/cart_basket.png' ); ?>" />
