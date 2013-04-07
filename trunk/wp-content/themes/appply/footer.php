@@ -87,7 +87,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
                 <div id="sitemap-main" style="display: block; float: left; width: 180px; margin: 30px">
                     <h4>Sitemap</h4>
                     <ul>
-                        <?php wp_list_pages( 'sort_column=menu_order&depth=6&title_li=&exclude=' ); ?>
+                        <?php wp_list_pages( 'sort_column=menu_order&depth=1&title_li=&exclude=' ); wp_ ?>
                     </ul>
                 </div>
             </div>
