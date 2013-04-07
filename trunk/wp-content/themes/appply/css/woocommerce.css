@@ -404,7 +404,7 @@ p.stars span a.star-5 {
   width: 3.631em;
   padding: 1em 0;
   text-align: center;
-  background: #7b6a8f;
+  background: #609a00;
   opacity: 0.7;
   filter: alpha(opacity=@opacity * 100);
   color: #fff;
@@ -1189,6 +1189,7 @@ table.cart .product-thumbnail img {
   ul.products li.product {
     margin-right: 3.8%;
     clear: none;
+    text-align: center;
   }
   ul.products li.product:nth-child(2n) {
     float: left;
