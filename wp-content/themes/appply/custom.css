@@ -165,6 +165,27 @@ body {
     text-align: center;
     padding: 5px;
 }
+
+/* Ninja Form Plugin */
+.ninja-forms-form label {
+    width: 130px;
+    display: inline-block;
+    text-align: right;
+    vertical-align: top;
+}
+.ninja-forms-form .field-wrap {
+    padding: 3px 0;
+}
+.ninja-forms-form .submit-form-margin {
+    margin-left: 133px;
+}
+.ninja-forms-form .width-fix-350 {
+    width: 350px;
+}
+.ninja-forms-form .height-fix-120 {
+    height: 120px;
+}
+
 /* 
 DESKTOP STYLES
 -----------------
