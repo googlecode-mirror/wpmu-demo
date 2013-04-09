@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 //                        woocommerce_get_template_part( 'content', 'product' );
 //                        $product = new WC_Product( $loop->post->ID );
                        // echo $loop->post->guid;
-                    echo "<li><div><a href='" . $loop->post->guid . "'>" . $product->get_image() . "</a></div><div><a href='".$loop->post->guid."'>" . $product->get_title() . "</a></div></li>";
+                    echo "<li><div id='image-slide'><a href='" . $loop->post->guid . "'>" . $product->get_image() . "</a></div><div><a href='".$loop->post->guid."'>" . $product->get_title() . "</a></div></li>";
                     endwhile;
                 } else {
                     echo __( 'No products found' );

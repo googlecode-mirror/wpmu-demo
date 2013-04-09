@@ -96,7 +96,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 				<div class="block" style="margin: 30px 30px 20px 0;">
                     <h4>Like us on Facebook</h4>
 			        <?php woo_sidebar( 'footer-right' ); ?>
-                       <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fplatform&amp;width=292&amp;height=290&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color&amp;header=true&amp;appId=193435037371900" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:290px; background-color: #ffffff" allowTransparency="false"></iframe>
+                    <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fplatform&amp;width=292&amp;height=210&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color&amp;header=true&amp;appId=193435037371900" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:210px;" allowTransparency="true"></iframe>
 				</div>
 			</div>
 
