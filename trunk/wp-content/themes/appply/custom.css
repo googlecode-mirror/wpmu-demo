@@ -186,6 +186,10 @@ body {
     height: 120px;
 }
 
+#image-slide a img
+{
+    border: 2px solid;
+}
 /* 
 DESKTOP STYLES
 -----------------
