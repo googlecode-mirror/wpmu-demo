@@ -151,6 +151,10 @@ $woocommerce->show_messages();
 
 	<?php do_action('woocommerce_cart_collaterals'); ?>
 
+    <div style="display: block; float: left; width: 440px; height: 280px; background-color: #5c8d05">
+        <h1 style="color: white; text-align: center; padding: 20px">Ads Here (440 x 280)</h1>
+    </div>
+
 	<?php woocommerce_cart_totals(); ?>
 
 	<?php woocommerce_shipping_calculator(); ?>
