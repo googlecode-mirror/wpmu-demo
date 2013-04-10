@@ -696,6 +696,8 @@ ul.products li.product a .more-info {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  /* custom */
+  clear: both
 }
 .single-product .woocommerce_tabs .tabs,
 .single-product .woocommerce-tabs .tabs {
@@ -721,6 +723,9 @@ ul.products li.product a .more-info {
 .single-product .woocommerce_tabs .tabs li,
 .single-product .woocommerce-tabs .tabs li {
   border-right: 1px solid #d5d5d5;
+  /* custom */
+  display: inline-block;
+  padding: 10px;
 }
 .single-product .woocommerce_tabs .tabs li a,
 .single-product .woocommerce-tabs .tabs li a {
@@ -732,7 +737,7 @@ ul.products li.product a .more-info {
 .single-product .woocommerce_tabs .panel,
 .single-product .woocommerce-tabs .panel {
 
-  margin: 0 5px;
+  margin: 0 25px;
   padding: 5 2em;
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */

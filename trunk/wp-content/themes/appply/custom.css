@@ -78,6 +78,10 @@ body {
 #main-nav li {
     padding: 7px 0;
 }
+#navigation ul.nav > li a {
+    padding-left: 8px;
+    padding-right: 8px;
+}
 
 .slide-content .entry {
     margin-top: -22px;
@@ -189,6 +193,12 @@ body {
 #image-slide a img
 {
     border: 2px solid;
+}
+
+/* product pages */
+.woocommerce_tabs {
+    display: block;
+    float: left;
 }
 /* 
 DESKTOP STYLES

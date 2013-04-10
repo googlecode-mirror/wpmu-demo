@@ -25,7 +25,7 @@ get_header();
         
         <?php woo_main_after(); ?>
 
-        <?php get_sidebar(); ?>
+        <?php // get_sidebar(); ?>
 
     </div><!-- /#content -->
 		
