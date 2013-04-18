@@ -42,6 +42,7 @@ function mt_toplevel_page() {
 }
 
 
+
 //// mt_settings_page() displays the page content for the Test settings submenu
 //function mt_settings_page() {
 //    echo "<h2>" . __( 'Test Settings', 'menu-test' ) . "</h2>";

@@ -43,7 +43,7 @@ woo_head();
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/images/buttons/applyToAgentBt.png'); ?>"/>
             </form>
             <?php else :?>
-            <span id="welcome-msg">ยินดีต้อนรับ : <?php echo get_current_user() ?></span>
+            <span id="welcome-msg">ยินดีต้อนรับ :<a href="http://localhost/srikrung/my-account/"> <?php  echo wp_get_current_user()->user_firstname  ?></a></span>
             <span>(<a href="<?php echo wp_logout_url() ?>">Logout</a>)</span>
             <?php endif ?>
         </div>
