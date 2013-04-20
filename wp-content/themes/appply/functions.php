@@ -37,6 +37,10 @@ if ( is_woocommerce_activated() ) {
 /* You can add custom functions below */
 /*-----------------------------------------------------------------------------------*/
 
+function admin_head_logo() {
+    echo '<div style="margin: 10px"><img src="' . get_template_directory_uri() .'/images/logo_srikrung.png" alt=""/></div>';
+}
+add_action( 'admin_head', 'admin_head_logo' );
 
 
 
