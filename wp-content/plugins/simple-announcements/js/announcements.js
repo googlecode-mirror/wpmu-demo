@@ -13,12 +13,12 @@ jQuery(document).ready(function($) {
     }
 
     /* Frontend Scripts */
-    if($('#announcements').length){    
-        if($.cookie('sap_active') == 'false') {
-            $("#announcements").hide();
-        };
+    if($('#announcements').length){
+//        if($.cookie('sap_active') == 'false') {
+//            $("#announcements").hide();
+//        };
 
-        $("body").prepend($("#announcements"));
+//        $("body").prepend($("#announcements"));
         $('#announcements .sap_message').cycle('fade');
     }
 });

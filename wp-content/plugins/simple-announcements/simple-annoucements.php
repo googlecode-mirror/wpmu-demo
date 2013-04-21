@@ -181,4 +181,4 @@ function sap_display_announcement() {
         <?php
 	endif;
 }
-add_action('wp_footer', 'sap_display_announcement');
+//add_action('wp_footer', 'sap_display_announcement');
