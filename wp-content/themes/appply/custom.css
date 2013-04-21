@@ -47,6 +47,20 @@ body {
     vertical-align: bottom;
 }
 
+#form-login-bar #username-input, #form-login-bar #password-input {
+    line-height: 0;
+    background: auto;
+    padding: 3px;
+    margin: 0px;
+    font-size: 1em;
+    font-family: Arial;
+    color: #000000;
+    background-color: #FFFFFF;
+    border: 1px;
+    border-radius: 0;
+    outline: #006600;
+}
+
 #header #logo {
     margin: 20px 0 0 15px;
 }
