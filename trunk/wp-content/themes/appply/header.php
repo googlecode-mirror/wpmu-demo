@@ -29,7 +29,10 @@ woo_head();
 </head>
 <body <?php body_class(); ?>>
 <?php woo_top(); ?>
-
+<div>
+    <?php echo sap_display_announcement(); ?>
+    <?php // echo dispaly_testimonial_slider(); ?>
+</div>
 <div id="top-login-bar" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/images/top_login_bar.png' ); ?>); height: 37px;">
     <div id="top-login-bar-wrapper">
         <div style="display: inline-block; padding: 2px;">
