@@ -127,14 +127,14 @@ foreach ( $fields as $field ) :
 	elseif ( in_array( $field_type, array( 'verification', 'secret' ) ) ) :
 		
 		if ( $field_type == 'verification' ) :
-			$verification .= sprintf(
-				'<fieldset class="vfb-fieldset vfb-fieldset-%1$d %2$s %3$s" id="%4$s"><div class="vfb-legend"><h3>%5$s</h3></div><ul class="vfb-section vfb-section-%1$d">',
-				$count,
-				$field->field_key,
-				$css,
-				$id_attr,
-				stripslashes( $field->field_name )
-			);
+//			$verification .= sprintf(
+//				'<fieldset class="vfb-fieldset vfb-fieldset-%1$d %2$s %3$s" id="%4$s"><div class="vfb-legend"><h3>%5$s</h3></div><ul class="vfb-section vfb-section-%1$d">',
+//				$count,
+//				$field->field_key,
+//				$css,
+//				$id_attr,
+//				stripslashes( $field->field_name )
+//			);
 		endif;
 		
 		if ( $field_type == 'secret' ) :
@@ -152,7 +152,7 @@ foreach ( $fields as $field ) :
 				$user_identity = ! empty( $user->ID ) ? $user->display_name : '';
 				
 				// Display a message for logged in users
-				$verification .= '<li class="vfb-item" id="' . $id_attr . '">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. Verification not required.', 'visual-form-builder' ), admin_url( 'profile.php' ), $user_identity ) . '</li>';
+				//$verification .= '<li class="vfb-item" id="' . $id_attr . '">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. Verification not required.', 'visual-form-builder' ), admin_url( 'profile.php' ), $user_identity ) . '</li>';
 			endif;
 			
 			$validation = ' {digits:true,maxlength:2,minlength:2}';
