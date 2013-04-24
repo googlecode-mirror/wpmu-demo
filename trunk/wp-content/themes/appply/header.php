@@ -45,7 +45,7 @@ woo_head();
             <span>(<a href="<?php echo wp_logout_url() ?>">Logout</a>)</span>
             <?php endif ?>
         </div>
-        <div style="display: block; float: right; width: 130px; padding: 3px;">
+        <div style="display: block; float: right; width: 140px; padding: 3px;">
             <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icons/cart_basket.png' ); ?>" />
             <span style="color: #d0dfe9">
                 <a class="cart-content" href="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>"><span><?php echo $woocommerce->cart->get_cart_contents_count();?></span></a>
