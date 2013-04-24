@@ -1,1 +1,4 @@
-#announcements img { width: 440px; height: 280px; }
+div#announcements img { 
+	width: 440px;
+	height: 280px; 
+}

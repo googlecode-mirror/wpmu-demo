@@ -16,6 +16,7 @@ Add styles beneath this line that you want to be applied across your entire site
 
 body {
     background-image: url(./images/bg_main.png);
+    font-family: tahoma !important;
 }
 
 #header {
@@ -35,7 +36,7 @@ body {
     padding: 2px;
 }
 #form-login-bar {
-    display: inline-block;
+    display: inline-block !important;
     margin: 0;
 }
 
@@ -44,21 +45,21 @@ body {
 }
 
 #form-login-bar .submit-btn {
-    vertical-align: bottom;
+    vertical-align: bottom !important;
 }
 
 #form-login-bar #username-input, #form-login-bar #password-input {
-    line-height: 0;
-    background: auto;
-    padding: 3px;
-    margin: 0px;
-    font-size: 1em;
-    font-family: Arial;
-    color: #000000;
-    background-color: #FFFFFF;
-    border: 1px;
-    border-radius: 0;
-    outline: #006600;
+    line-height: 1.6em !important;
+    background: auto !important;
+    padding: 3px !important;
+    margin: 0px !important;
+    font-size: 1em !important;
+    font-family: Arial !important;
+    color: #000000 !important;
+    background-color: #FFFFFF !important;
+    border: 1px !important;
+    border-radius: 0 !important;
+    outline: #006600 !important;
 }
 
 #header #logo {
@@ -76,12 +77,15 @@ body {
     overflow: auto;
 }
 
+#header {
+    /*height: 85px;*/
+}
 #header .header-left {
     margin: 0;
 }
 
 #header .header-right {
-    margin: 20px 15px 20px 0;
+    margin: 20px 15px 20px 0 !important;
 }
 
 #main-nav {
@@ -93,8 +97,12 @@ body {
     padding: 7px 0;
 }
 #navigation ul.nav > li a {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+}
+#navigation {
+    width: 646px;
+    float: right;
 }
 
 .slide-content .entry {
@@ -166,8 +174,8 @@ body {
 
 /* Layout */
 .layout-full #main {
-    margin: 30px;
-    width: 900px;
+    margin: 30px !important;
+    width: 900px !important;
 }
 
 #product-recommend ul.slide-products {
@@ -213,6 +221,13 @@ body {
 .woocommerce_tabs {
     display: block;
     float: left;
+}
+
+.single-product .thumbnails a {
+    width: 30.75% !important;
+}
+.single-product .images img {
+    width: 100% !important;
 }
 /* 
 DESKTOP STYLES

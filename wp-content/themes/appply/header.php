@@ -19,9 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 <?php woo_meta(); ?>
 <link rel="pingback" href="<?php echo esc_url( get_bloginfo( 'pingback_url' ) ); ?>" />
 <?php
-/* Load Css reset for support different browser */
-wp_register_style( 'reset-stylesheet', get_template_directory_uri() . '/css/reset.css' );
-wp_enqueue_style( 'reset-stylesheet' );
+
 
 wp_head();
 woo_head();
@@ -40,14 +38,14 @@ woo_head();
                 <input type="password" name="pwd" id="password-input" alt="password"/>
                 <input type="hidden" name="redirect_to" value="<?php echo get_home_url() ?>" />
                 <input type="image" class="submit-btn" src="<?php echo esc_url(get_template_directory_uri() . '/images/buttons/loginBt.png'); ?>" />
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/images/buttons/applyToAgentBt.png'); ?>"/>
+                <input type="image" class="submit-btn" src="<?php echo esc_url(get_template_directory_uri() . '/images/buttons/applyToAgentBt.png'); ?>" />
             </form>
             <?php else :?>
             <span id="welcome-msg">ยินดีต้อนรับ :<a href="http://localhost/srikrung/my-account/"> <?php  echo wp_get_current_user()->user_firstname  ?></a></span>
             <span>(<a href="<?php echo wp_logout_url() ?>">Logout</a>)</span>
             <?php endif ?>
         </div>
-        <div style="display: inline-block; position: relative;">
+        <div style="display: block; float: right; width: 130px; padding: 3px;">
             <img src="<?php echo esc_url( get_template_directory_uri() . '/images/icons/cart_basket.png' ); ?>" />
             <span style="color: #d0dfe9">
                 <a class="cart-content" href="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>"><span><?php echo $woocommerce->cart->get_cart_contents_count();?></span></a>
@@ -84,7 +82,7 @@ woo_head();
 						<?php wp_list_pages( 'sort_column=menu_order&depth=6&title_li=&exclude=' ); ?>
 					</ul><!-- /#nav -->
 			        <?php } ?>
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/buttons/button_bar_tail.png'); ?>" style="float: right" />
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/buttons/button_bar_tail.png'); ?>" style="float: right;" />
 				</nav><!-- /#navigation -->
 			</div><!-- /.header-right -->
 
