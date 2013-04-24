@@ -86,6 +86,8 @@ body {
 
 #header .header-right {
     margin: 20px 15px 20px 0 !important;
+    float: right;
+    display: inline;
 }
 
 #main-nav {
@@ -101,8 +103,8 @@ body {
     padding-right: 8px !important;
 }
 #navigation {
-    width: 646px;
-    float: right;
+    /*width: 646px;*/
+    /*float: right !important;*/
 }
 
 .slide-content .entry {

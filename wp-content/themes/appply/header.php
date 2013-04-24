@@ -69,7 +69,7 @@ woo_head();
 	        <?php woo_nav_before(); ?>
 
 	        <div class="header-right">
-				<nav id="navigation" class="col-full" role="navigation">
+				<nav id="navigation" class="col-full" role="navigation" style="width: 650px !important; float: right;">
                     <img src="<?php echo esc_url(get_template_directory_uri() . '/images/buttons/button_bar_head.png'); ?>" style="float: left" />
                     <?php
 					if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'primary-menu' ) ) {
@@ -82,7 +82,7 @@ woo_head();
 						<?php wp_list_pages( 'sort_column=menu_order&depth=6&title_li=&exclude=' ); ?>
 					</ul><!-- /#nav -->
 			        <?php } ?>
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/buttons/button_bar_tail.png'); ?>" style="float: right;" />
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/buttons/button_bar_tail.png'); ?>" style="float: left;" />
 				</nav><!-- /#navigation -->
 			</div><!-- /.header-right -->
 
