@@ -241,6 +241,9 @@ div.agent-slider div.agent-photo {
     background-color: #FFFFFF;
     text-align: center;
 }
+div.agent-slider div.agent-photo img {
+    margin-top: 9px;
+}
 div.agent-slider div.agent-name {
     font-size: 12px;
     /*font-weight: bold;*/

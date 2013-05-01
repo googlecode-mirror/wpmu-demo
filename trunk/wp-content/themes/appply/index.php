@@ -52,22 +52,16 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
         <div id="agent-recommend">
             <div class="agent-slider">
-                <div class="slide">
-                    <div class="agent-photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/simple_logo_07.png' ); ?>"></div>
-                    <div class="agent-name">นายพิทักษ์ ปั้นมูล<br>สาขานครสวรรค์</div>
-                </div>
-                <div class="slide">
-                    <div class="agent-photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/simple_logo_07.png' ); ?>"></div>
-                    <div class="agent-name">นายพิทักษ์ ปั้นมูล<br>สาขานครสวรรค์</div>
-                </div>
-                <div class="slide">
-                    <div class="agent-photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/simple_logo_07.png' ); ?>"></div>
-                    <div class="agent-name">นายพิทักษ์ ปั้นมูล<br>สาขานครสวรรค์</div>
-                </div>
-                <div class="slide">
-                    <div class="agent-photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/simple_logo_07.png' ); ?>"></div>
-                    <div class="agent-name">นายพิทักษ์ ปั้นมูล<br>สาขานครสวรรค์</div>
-                </div>
+                <?php
+                $args = array('role' => 'agent'); // TODO : add this args to get_users() for filtering only agent users.
+                $agents = get_users();
+                foreach ($agents as $agent): ?>
+                    <div class="slide">
+                        <div class="agent-photo"><?php echo get_wp_user_avatar($agent->ID, 100, 'center'); ?></div>
+                        <div class="agent-name"><?php echo $agent->display_name ?><br><?php echo $agent->user_email ?></div>
+                    </div>
+                <?php endforeach ?>
+
             </div>
         </div>
 
