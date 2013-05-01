@@ -32,6 +32,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
     <div id="content" class="col-full">
 
         <div id="product-recommend">
+            <div class="slider4">
+                <div class="slide"><img src="http://placehold.it/300x150&text=FooBar1"></div>
+                <div class="slide"><img src="http://placehold.it/300x150&text=FooBar2"></div>
+                <div class="slide"><img src="http://placehold.it/300x150&text=FooBar3"></div>
+                <div class="slide"><img src="http://placehold.it/300x150&text=FooBar4"></div>
+                <div class="slide"><img src="http://placehold.it/300x150&text=FooBar5"></div>
+            </div>
+
             <ul class="slide-products">
                 <?php
                 $args = array(

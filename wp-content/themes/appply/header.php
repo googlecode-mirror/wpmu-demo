@@ -27,7 +27,24 @@ woo_head();
 </head>
 <body <?php body_class(); ?>>
 <?php woo_top(); ?>
-
+<?php
+wp_register_script( 'bxSlider', get_template_directory_uri() . '/includes/jquery.bxslider/jquery.bxslider.js', array( 'jquery' ) );
+wp_enqueue_script( 'bxSlider' );
+?>
+<script type="text/javascript">
+    $(document).ready(function(){
+        alert("55555");
+        $('.slider4').bxSlider({
+            slideWidth: 300,
+            minSlides: 2,
+            maxSlides: 3,
+            moveSlides: 1,
+            slideMargin: 10,
+            pager: false,
+            auto: true
+        });
+    });
+</script>
 <div id="top-login-bar" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/images/top_login_bar.png' ); ?>); height: 37px;">
     <div id="top-login-bar-wrapper">
         <div style="display: inline-block; padding: 2px;">
