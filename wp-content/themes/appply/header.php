@@ -34,12 +34,12 @@ wp_enqueue_script( 'bxSlider' );
 <script type="text/javascript">
    jQuery.noConflict();
    jQuery(document).ready(function(){
-        jQuery('.slider4').bxSlider({
-            slideWidth: 300,
+        jQuery('.agent-slider').bxSlider({
+            slideWidth: 185,
             minSlides: 2,
-            maxSlides: 3,
+            maxSlides: 4,
             moveSlides: 1,
-            slideMargin: 10,
+            slideMargin: 20,
             pager: false,
             auto: true
         });
