@@ -172,6 +172,7 @@ body {
     background-image: url("images/agentRecommentFrame.png");
     background-repeat: no-repeat;
     height: 252px;
+    text-align: center;
 }
 
 /* Layout */
