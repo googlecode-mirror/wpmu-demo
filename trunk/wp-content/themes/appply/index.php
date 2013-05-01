@@ -32,25 +32,22 @@ if ( ! defined( 'ABSPATH' ) ) exit;
     <div id="content" class="col-full">
 
         <div id="product-recommend">
-            <ul class="slide-products">
+            <div class="product-slider">
                 <?php
-                $args = array(
-                    'post_type' => 'product',
-                    'posts_per_page' => 4
-                );
+                $args = array('post_type' => 'product', 'posts_per_page' => 12);
                 $loop = new WP_Query( $args );
                 if ( $loop->have_posts() ) {
-                    while ( $loop->have_posts() ) : $loop->the_post();
-//                        woocommerce_get_template_part( 'content', 'product' );
-//                        $product = new WC_Product( $loop->post->ID );
-                       // echo $loop->post->guid;
-                    echo "<li><div id='image-slide'><a href='" . $loop->post->guid . "'>" . $product->get_image() . "</a></div><div><a href='".$loop->post->guid."'>" . $product->get_title() . "</a></div></li>";
-                    endwhile;
+                    while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                        <div class="slide">
+                            <div class="product-photo"><a href="<?php echo $loop->post->guid ?>"><?php echo $product->get_image() ?></a></div>
+                            <div class="product-name"><a href="<?php echo $loop->post->guid ?>"><?php echo $product->get_title() ?></a></div>
+                        </div>
+                    <?php endwhile;
                 } else {
                     echo __( 'No products found' );
                 }
                 ?>
-            </ul><!--/.products-->
+            </div>
         </div>
 
         <div id="agent-recommend">
@@ -71,9 +68,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
                     <div class="agent-photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/simple_logo_07.png' ); ?>"></div>
                     <div class="agent-name">นายพิทักษ์ ปั้นมูล<br>สาขานครสวรรค์</div>
                 </div>
-
             </div>
-<!--            <img src="--><?php //echo esc_url( get_template_directory_uri() . '/images/dummy_agents.png' ); ?><!--" alt="" style="margin-top: 65px;"/>-->
         </div>
 
         <div id="banner-footer">
