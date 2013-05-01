@@ -232,6 +232,59 @@ body {
 .single-product .images img {
     width: 100% !important;
 }
+
+/* product slide styles */
+div.agent-slider div.slide {
+}
+div.agent-slider div.agent-photo {
+    width: 185px;
+    height: 120px;
+    box-shadow: 2px 2px 5px #888888;
+    background-color: #FFFFFF;
+}
+div.agent-slider div.agent-name {
+    font-size: 12px;
+    /*font-weight: bold;*/
+    color: #68ab2f;
+    text-align: center;
+    margin-top: 5px;
+}
+
+div#agent-recommend .bx-wrapper {
+    position: absolute;
+    margin-top: 65px;
+    margin-left: 55px;
+}
+div#agent-recommend .bx-viewport {
+    padding: 10px;
+}
+
+.bx-wrapper .bx-prev {
+    left: -30px;
+    background: url(images/buttons/preview_green_bt_06.png) no-repeat;
+}
+
+.bx-wrapper .bx-next {
+    right: -60px;
+    background: url(images/buttons/next_green_bt.png) no-repeat;
+}
+
+.bx-wrapper .bx-controls-direction a {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    outline: 0;
+    width: 32px;
+    height: 32px;
+    text-indent: -9999px;
+    z-index: 9999;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+    /*display: none;*/
+}
+
+
 /* 
 DESKTOP STYLES
 -----------------

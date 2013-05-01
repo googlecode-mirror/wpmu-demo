@@ -32,14 +32,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
     <div id="content" class="col-full">
 
         <div id="product-recommend">
-            <div class="slider4">
-                <div class="slide"><img src="http://placehold.it/300x150&text=FooBar1"></div>
-                <div class="slide"><img src="http://placehold.it/300x150&text=FooBar2"></div>
-                <div class="slide"><img src="http://placehold.it/300x150&text=FooBar3"></div>
-                <div class="slide"><img src="http://placehold.it/300x150&text=FooBar4"></div>
-                <div class="slide"><img src="http://placehold.it/300x150&text=FooBar5"></div>
-            </div>
-
             <ul class="slide-products">
                 <?php
                 $args = array(
@@ -62,7 +54,26 @@ if ( ! defined( 'ABSPATH' ) ) exit;
         </div>
 
         <div id="agent-recommend">
-            <img src="<?php echo esc_url( get_template_directory_uri() . '/images/dummy_agents.png' ); ?>" alt="" style="margin-top: 65px;"/>
+            <div class="agent-slider">
+                <div class="slide">
+                    <div class="agent-photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/simple_logo_07.png' ); ?>"></div>
+                    <div class="agent-name">นายพิทักษ์ ปั้นมูล<br>สาขานครสวรรค์</div>
+                </div>
+                <div class="slide">
+                    <div class="agent-photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/simple_logo_07.png' ); ?>"></div>
+                    <div class="agent-name">นายพิทักษ์ ปั้นมูล<br>สาขานครสวรรค์</div>
+                </div>
+                <div class="slide">
+                    <div class="agent-photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/simple_logo_07.png' ); ?>"></div>
+                    <div class="agent-name">นายพิทักษ์ ปั้นมูล<br>สาขานครสวรรค์</div>
+                </div>
+                <div class="slide">
+                    <div class="agent-photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/simple_logo_07.png' ); ?>"></div>
+                    <div class="agent-name">นายพิทักษ์ ปั้นมูล<br>สาขานครสวรรค์</div>
+                </div>
+
+            </div>
+<!--            <img src="--><?php //echo esc_url( get_template_directory_uri() . '/images/dummy_agents.png' ); ?><!--" alt="" style="margin-top: 65px;"/>-->
         </div>
 
         <div id="banner-footer">
