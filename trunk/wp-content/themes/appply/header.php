@@ -55,7 +55,7 @@ wp_enqueue_script( 'bxSlider' );
                 <input type="password" name="pwd" id="password-input" alt="password"/>
                 <input type="hidden" name="redirect_to" value="<?php echo get_home_url() ?>" />
                 <input type="image" class="submit-btn" src="<?php echo esc_url(get_template_directory_uri() . '/images/buttons/loginBt.png'); ?>" />
-                <input type="image" class="submit-btn" src="<?php echo esc_url(get_template_directory_uri() . '/images/buttons/applyToAgentBt.png'); ?>" />
+                <input type="image" class="submit-btn" src="<?php echo esc_url(get_template_directory_uri() . '/images/buttons/apple_member.png'); ?>" />
             </form>
             <?php else :?>
             <span id="welcome-msg">ยินดีต้อนรับ :<a href="http://localhost/srikrung/my-account/"> <?php  echo wp_get_current_user()->user_firstname  ?></a></span>
