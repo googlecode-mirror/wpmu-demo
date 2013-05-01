@@ -233,14 +233,13 @@ body {
     width: 100% !important;
 }
 
-/* product slide styles */
-div.agent-slider div.slide {
-}
+/* agent slide styles */
 div.agent-slider div.agent-photo {
     width: 185px;
     height: 120px;
     box-shadow: 2px 2px 5px #888888;
     background-color: #FFFFFF;
+    text-align: center;
 }
 div.agent-slider div.agent-name {
     font-size: 12px;
@@ -249,7 +248,6 @@ div.agent-slider div.agent-name {
     text-align: center;
     margin-top: 5px;
 }
-
 div#agent-recommend .bx-wrapper {
     position: absolute;
     margin-top: 65px;
@@ -258,17 +256,14 @@ div#agent-recommend .bx-wrapper {
 div#agent-recommend .bx-viewport {
     padding: 10px;
 }
-
-.bx-wrapper .bx-prev {
+div#agent-recommend .bx-wrapper .bx-prev {
     left: -30px;
     background: url(images/buttons/preview_green_bt_06.png) no-repeat;
 }
-
-.bx-wrapper .bx-next {
+div#agent-recommend .bx-wrapper .bx-next {
     right: -60px;
     background: url(images/buttons/next_green_bt.png) no-repeat;
 }
-
 .bx-wrapper .bx-controls-direction a {
     position: absolute;
     top: 50%;
@@ -280,8 +275,51 @@ div#agent-recommend .bx-viewport {
     z-index: 9999;
 }
 
-.bx-wrapper .bx-controls-direction a.disabled {
-    /*display: none;*/
+/* product slide styles */
+div.product-slider div.slide {
+}
+div.product-slider div.product-photo {
+    width: 185px;
+    height: 120px;
+    box-shadow: 2px 2px 5px #888888;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+div.product-slider div.product-photo img {
+    margin-top: 13px;
+}
+div.product-slider div.product-name {
+    font-size: 12px;
+    /*font-weight: bold;*/
+    color: #e97a00;
+    text-align: center;
+    margin-top: 5px;
+}
+div#product-recommend .bx-wrapper {
+    position: absolute;
+    margin-top: 65px;
+    margin-left: 55px;
+}
+div#product-recommend .bx-viewport {
+    padding: 10px;
+}
+div#product-recommend .bx-wrapper .bx-prev {
+    left: -30px;
+    background: url(images/buttons/preview_orange_bt_03.png) no-repeat;
+}
+div#product-recommend .bx-wrapper .bx-next {
+    right: -60px;
+    background: url(images/buttons/next_orange_bt.png) no-repeat;
+}
+.bx-wrapper .bx-controls-direction a {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    outline: 0;
+    width: 32px;
+    height: 32px;
+    text-indent: -9999px;
+    z-index: 9999;
 }
 
 
