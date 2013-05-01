@@ -32,9 +32,8 @@ wp_register_script( 'bxSlider', get_template_directory_uri() . '/includes/jquery
 wp_enqueue_script( 'bxSlider' );
 ?>
 <script type="text/javascript">
-    jQuery.noConflict();
-   (document).ready(function(){
-        alert("55555");
+   jQuery.noConflict();
+   jQuery(document).ready(function(){
         jQuery('.slider4').bxSlider({
             slideWidth: 300,
             minSlides: 2,
