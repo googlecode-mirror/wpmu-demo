@@ -244,9 +244,11 @@ div.agent-slider div.agent-photo {
 div.agent-slider div.agent-name {
     font-size: 12px;
     /*font-weight: bold;*/
-    color: #68ab2f;
     text-align: center;
     margin-top: 5px;
+}
+div.agent-slider div.agent-name a {
+    color: #68ab2f !important;
 }
 div#agent-recommend .bx-wrapper {
     position: absolute;
@@ -291,9 +293,11 @@ div.product-slider div.product-photo img {
 div.product-slider div.product-name {
     font-size: 12px;
     /*font-weight: bold;*/
-    color: #e97a00;
     text-align: center;
     margin-top: 5px;
+}
+div.product-slider div.product-name a {
+    color: #e97a00 !important;
 }
 div#product-recommend .bx-wrapper {
     position: absolute;
