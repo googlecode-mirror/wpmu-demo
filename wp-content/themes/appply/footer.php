@@ -72,7 +72,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
                     <div style="margin-top: 20px;">
                         <p class="copyright ">ซอยเอกชัย 83/1 แขวงบางบอน</p>
                         <p class="copyright ">เขตบางบอน กทม 10150</p>
-                        <p class="copyright ">Tel: 02-867-3888ม 02-867-380-04</p>
+                        <p class="copyright ">Tel: 02-867-3888, 02-867-380-04</p>
                         <p class="copyright ">Fax: 02-899-4994</p>
                         <p class="copyright ">Email : sale_group@srikrungbroker.co.th</p>
 

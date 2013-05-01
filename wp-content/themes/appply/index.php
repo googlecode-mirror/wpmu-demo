@@ -54,7 +54,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
         </div>
 
         <div id="agent-recommend">
-<!--            <img src="--><?php //echo esc_url( get_template_directory_uri() . '/images/agentRecommentFrame.png' ); ?><!--" alt=""/>-->
+            <img src="<?php echo esc_url( get_template_directory_uri() . '/images/dummy_agents.png' ); ?>" alt="" style="margin-top: 65px;"/>
         </div>
 
         <div id="banner-footer">
