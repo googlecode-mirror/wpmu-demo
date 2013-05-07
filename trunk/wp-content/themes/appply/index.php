@@ -58,7 +58,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
                 foreach ($agents as $agent): ?>
                     <div class="slide">
                         <div class="agent-photo"><?php echo get_wp_user_avatar($agent->ID, 100, 'center'); ?></div>
-                        <div class="agent-name"><?php echo $agent->display_name ?><br><?php echo $agent->user_email ?></div>
+                        <div class="agent-name"><?php echo $agent->display_name ?><br><?php echo get_user_meta($agent->ID, 'user_branch', true) ?></div>
                     </div>
                 <?php endforeach ?>
 
@@ -67,7 +67,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
         <div id="banner-footer">
             <div id="banner-read-btn">
-                <img src="<?php echo esc_url( get_template_directory_uri() . '/images/buttons/readeDetailButton.png' ); ?>" alt=""/>
+                <a href="รับสมัครตัวแทน"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/buttons/readeDetailButton.png' ); ?>" alt=""/></a>
             </div>
         </div>
 
