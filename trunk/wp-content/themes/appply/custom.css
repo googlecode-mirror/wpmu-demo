@@ -249,6 +249,7 @@ div.agent-slider div.agent-name {
     /*font-weight: bold;*/
     text-align: center;
     margin-top: 5px;
+    color: #68ab2f !important;
 }
 div.agent-slider div.agent-name a {
     color: #68ab2f !important;
