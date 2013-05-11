@@ -339,3 +339,87 @@ Add styles inside the media query below that you only want to be applied to the 
 @media only screen and (min-width: 768px) {
 	/* Desktop styles go here */
 }
+
+
+/* ---------------- Register Agent Style --------------- */
+#register-aget-menu {
+    display: block;
+    margin: 10px 0;
+}
+#register-aget-menu a {
+    display: inline-block;
+    margin: 5px;
+}
+
+.text-orange {
+    color: orange;
+}
+
+#privilege-banner-left {
+    float: left;
+    display: block;
+}
+#privilege-info-right {
+    display: inline-block;
+    float: right;
+    width: 48%;
+}
+#privilege-info-sum-wrapper {
+    background-color: #ffeede;
+}
+#privilege-info-right ul {
+    padding-left: 45px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    list-style-image: url('images/register-agent-privilege-bullet.png');
+}
+#privilege-info-right ul li {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.green-table-style thead tr {
+    background-color: #568215;
+    color: white;
+}
+.green-table-style tbody tr:nth-child(odd) {
+    background-color: #cfe9a2;
+}
+.green-table-style tbody tr:nth-child(even) {
+    background-color: #b0ca8e;
+}
+
+
+.bg-gray {
+    background-color: #f3f3f3;
+    padding: 20px;
+}
+
+.clear-image-style {
+    background: none repeat scroll 0 0 transparent !important;
+    border: 0 none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.clear-table-style {
+    width: auto !important;
+    border: 0 none !important;
+    box-shadow: none !important;
+    background-color: none !important;
+}
+.clear-table-style td {
+    border: 0 none !important;
+    box-shadow: none !important;
+    background-color: none !important;
+    padding: 5px;
+    vertical-align: middle !important;
+}
+
+
+#register-aget-download {
+    text-align: center;
+}
+
+/* ---------------- // END - Register Agent Style --------------- */
