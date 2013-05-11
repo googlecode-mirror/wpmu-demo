@@ -423,3 +423,25 @@ Add styles inside the media query below that you only want to be applied to the 
 }
 
 /* ---------------- // END - Register Agent Style --------------- */
+
+/* ---------------- Create Website Style ------------------------ */
+#create-web-info-sum-wrapper {
+    background-color: #ffeede;
+    padding: 10px;
+}
+#create-web-info-sum-wrapper ul {
+    vertical-align: top;
+    padding-left: 45px;
+    margin: 0 !important;
+    margin-left: 60px !important;
+    list-style-image: url('images/register-agent-privilege-bullet.png');
+}
+#create-web-info-sum-wrapper ul li {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+#create-web-button {
+    text-align: center;
+    margin: 25px 0;
+}
