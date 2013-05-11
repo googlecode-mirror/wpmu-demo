@@ -18,9 +18,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
         <section id="main" class="fullwidth">
             
             <div id="register-aget-menu">
-                <a href="./สิทธิประโยชน์/"><img src="<?php echo get_template_directory_uri() ?>/images/register-agent-menu-01.png" alt="สิทธิประโยชน์ของตัวแทน"/></a>
-                <a href="./ขั้นตอนการสมัครตัวแทน/"><img src="<?php echo get_template_directory_uri() ?>/images/register-agent-menu-02.png" alt="ขั้นตอนการสมัครตัวแทน"/></a>
-                <a href="./ดาวน์โหลดใบสมัคร"><img src="<?php echo get_template_directory_uri() ?>/images/register-agent-menu-03.png" alt="ดาวน์โหลดใบสมัครตัวแทน"/></a>
+                <a href="./สิทธิประโยชน์/" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/register-agent-menu-01.png" alt="สิทธิประโยชน์ของตัวแทน"/></a>
+                <a href="./ขั้นตอนการสมัครตัวแทน/" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/register-agent-menu-02.png" alt="ขั้นตอนการสมัครตัวแทน"/></a>
+                <a href="./ดาวน์โหลดใบสมัคร" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/register-agent-menu-03.png" alt="ดาวน์โหลดใบสมัครตัวแทน"/></a>
             </div>
         
             <?php
