@@ -26,10 +26,10 @@ if ( ! defined( 'ABSPATH' ) ) exit;
                 <div id="privilege-info-sum-wrapper">
                     <ul id="privilege-info-sum">
                         <li>ประกันอุบัติเหตุ <span class="text-orange">50,000</span> บาท</li>
-                        <li>รับส่วนลดเพิ่มสูงสุด <span class="text-orange">12 %</span> เบี้ยประกกันสำหรับสมาชิก</li>
+                        <li>รับส่วนลดเพิ่มสูงสุด <span class="text-orange">12 %</span> เบี้ยประกันสำหรับสมาชิก</li>
                         <li>ผ่อนได้สูงสุด 6 งวด ดอกเบี้ย <span class="text-orange">0%</span></li>
                         <li>แจกคู่มือและ DVD ความรู้ประกันวินาศภัย</li>
-                        <li>เข้าอบรมหลักสูตรต่างๆจากบริาัทประกันภัยชั้นนำ</li>
+                        <li>เข้าอบรมหลักสูตรต่างๆจากบริษัทประกันภัยชั้นนำ</li>
                         <li>มีเจ้าหน้าที่สินไหมให้คำปรึกษา</li>
                         <li>จัดส่งกรมธรรม์ถึงบ้าน <span class="text-orange">ฟรี!!!</span></li>
                     </ul>
