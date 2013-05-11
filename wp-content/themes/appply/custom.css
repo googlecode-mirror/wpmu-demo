@@ -445,3 +445,51 @@ Add styles inside the media query below that you only want to be applied to the 
     text-align: center;
     margin: 25px 0;
 }
+
+#create-web-progress-bar {
+    overflow: auto;
+    text-align: center;
+    margin-bottom: 60px;
+}
+#create-web-progress-bar .step{
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 41px;
+    padding: 10px 0;
+    z-index: 10;
+    background-image: url('images/progress_bar/step.png');
+    background-repeat: no-repeat;
+}
+#create-web-progress-bar .step.active {
+    background-image: url('images/progress_bar/step-active.png');
+}
+
+#create-web-progress-bar .bar {
+    display: inline-block;
+    width: 200px;
+    height: 29px;
+    margin: 0 -5px;
+    background-image: url('images/progress_bar/bar.png');
+    background-repeat: repeat-x;
+}
+#create-web-progress-bar .bar.active {
+    background-image: url('images/progress_bar/bar-active.png');
+}
+
+#create-web-progress-bar .step-text {
+    position: absolute;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: -15px;
+    color: #cbcbcb;
+}
+#create-web-progress-bar .step-text.active {
+    color: #ff7e00;
+}
+.inline {
+    display: inline-block;
+}

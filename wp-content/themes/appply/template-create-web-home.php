@@ -42,7 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
                     </ul>
                 </div>
                 <div id="create-web-button">
-                    <a href="./สิทธิประโยชน์/" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/create-web-button.png" alt="เริ่มต้นสร้างเว็บไซต์"/></a>
+                    <a href="step1"><img src="<?php echo get_template_directory_uri() ?>/images/create-web-button.png" alt="เริ่มต้นสร้างเว็บไซต์"/></a>
                 </div>
             </div>
         
