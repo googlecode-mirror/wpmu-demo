@@ -50,7 +50,68 @@ if ( ! defined( 'ABSPATH' ) ) exit;
             </div>
 
             <div id="create-web-content">
-
+                <form action="#" class="bg-gray" id="create-web-agent-info">
+                    <h3>ยืนยันข้อมูลของผู้สมัคร</h3>
+                    <fieldset>
+                        <legend>ข้อมูลการติดต่อ</legend>
+                        <div class="field">
+                            <label for="agent-first">ชื่อ</label>
+                            <span>ทดสอบ</span>
+                        </div>
+                        <div class="field">
+                            <label for="agent-last">นามสกุล</label>
+                            <span>สร้างเว็บไซต์</span>
+                        </div>
+                        <div class="field">
+                            <label for="agent-mobile">เบอร์โทรศัพท์มือถือ</label>
+                            <span>082-7873533</span>
+                        </div>
+                        <div class="field">
+                            <label for="agent-email">อีเมล์</label>
+                            <span>thethak@gmail.com</span>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>ข้อมูลธุรกิจ</legend>
+                        <div class="field">
+                            <label for="agent-biz-name">ชื่อหน่วยธุรกิจ</label>
+                            <span>หน่วยธุรกิจตัวอย่าง</span>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>ที่อยู่ธุรกิจ</legend>
+                        <div class="field">
+                            <label for="agent-biz-address">ที่อยู่</label>
+                            <span>17/4 ซอยหกเขย ถนนตาคลีพัฒนา</span>
+                        </div>
+                        <div class="field">
+                            <label for="agent-biz-tumbol">ตำบล/แขวง</label>
+                            <span>ตาคลี</span>
+                        </div>
+                        <div class="field">
+                            <label for="agent-biz-amphore">อำเภอ/เขต</label>
+                            <span>ตาคลี</span>
+                        </div>
+                        <div class="field">
+                            <label for="agent-biz-province">จังหวัด</label>
+                            <span>นครสวรรค์</span>
+                        </div>
+                        <div class="field">
+                            <label for="agent-biz-zipcode">รหัสไปรษณีย์</label>
+                            <span>60140</span>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>ข้อมูลเว็บไซต์ธุรกิจ</legend>
+                        <div class="field">
+                            <label for="agent-biz-name">ชื่อเว็บไซต์</label>
+                            <span>http://www.srikrung.com/</span><span style="color: #73b106">pithak</span>
+                        </div>
+                    </fieldset>
+                    <input type="checkbox" value="1" id="create-web-comfirm" />
+                    <label for="create-web-comfirm"> อนุญาตให้ Srikrung.com ส่งอีเมลที่มีเนื้อหาหรือคำแนะนำเกี่ยวกับประกันภัย  สินค้าต่างในเว็บไซต์ รวมถึงข้อเสนอพิเศษต่างๆ ที่เกี่ยวกับการพัฒนาเว็บไซต์และการทำธุรกิจออนไลน์ได้</label>
+                    <div style="text-align: center"><input type="submit" value="บันทึกข้อมูล"/></div>
+                </form>
             </div>
 
 

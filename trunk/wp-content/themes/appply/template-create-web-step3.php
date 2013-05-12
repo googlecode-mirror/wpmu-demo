@@ -50,7 +50,12 @@ if ( ! defined( 'ABSPATH' ) ) exit;
             </div>
 
             <div id="create-web-content">
-
+                <form action="step4" class="bg-gray" style="text-align: center">
+                    <h3>เลือกชื่อเว็บไซต์</h3>
+                    <span style="font-size: 18px;">http://www.srikrung.com/</span>
+                    <input type="text" value="" placeholder="กรอกชื่อเว็บไซต์ที่ต้องการ (ภาษาอังกฤษ)" style="width: 30%" />
+                    <input type="submit" value="ตรวจสอบ" />
+                </form>
             </div>
 
 
