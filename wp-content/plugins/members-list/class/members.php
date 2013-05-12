@@ -75,7 +75,7 @@ class tern_members {
 			$r .= $this->sortby();
 		}
 		
-		$r .= '<ul class="tern_wp_members_list">';
+		$r .= '<table class="tern_wp_members_list">';
 		foreach($this->r as $u) {
 			//get user info
 			$u = new WP_User($u);
@@ -86,7 +86,7 @@ class tern_members {
 				$r .= $this->markup($u);
 			}
 		}
-		$r .= '</ul>';
+		$r .= '</table>';
 		if($a['pagination2'] !== false and $a['pagination2'] !== 'false') {
 			$r .= $this->pagination();
 		}
@@ -328,10 +328,9 @@ class tern_members {
 		$v = empty($_REQUEST['query']) ? 'search...' : $_REQUEST['query'];
 
 		$r = '<div class="tern_members_search">
-		<form method="get" action="'.$this->url.'">
-			<h2>Search Our '.ucwords($this->o['noun']).':</h2>
+		<form method="get" action="'.$this->url.'" id="tern_members_search_form">
 			<input type="text" id="query" name="query" class="blur" value="'.$v.'" />
-			by '.$ternSel->create(array(
+			 '.$ternSel->create(array(
 						'type'			=>	'paired',
 						'data'			=>	$this->o['searches'],
 						'id'			=>	'by',
@@ -339,8 +338,8 @@ class tern_members {
 						'select_value'	=>	'All Fields',
 						'selected'		=>	array($_REQUEST['by'])
 					)).'<input type="hidden" name="p" value="'.$_REQUEST['p'].'" />
-			<input type="hidden" name="page_id" value="'.$_REQUEST['page_id'].'" />
-			<input type="submit" value="Submit" />
+			<input type="hidden" id="page_id" name="page_id" value="'.$_REQUEST['page_id'].'" />
+			<input type="submit" id="submit" value="Submit" />
 		</form></div>';
 		if($e) { echo $r; }
 		return $r;
@@ -419,11 +418,16 @@ class tern_members {
 	function markup($u) {
 		global $tern_wp_members_defaults,$getMap;
 		$o = $this->wp->getOption('tern_wp_members',$tern_wp_members_defaults);
-		$s = '<li>'."\n    ";
-		if($o['gravatars']) {
-			$s .= '<a class="tern_wp_member_gravatar" href="'.get_author_posts_url($u->ID).'">'."\n        ".get_avatar($u->ID,60)."\n    ".'</a>'."\n    ";
-		}
+		$s = '<tr>'."\n    ";
+//		if($o['gravatars'])
+//        {
+//			$s .= '<a class="tern_wp_member_gravatar" href="'.get_author_posts_url($u->ID).'">'."\n        ".get_avatar($u->ID,60)."\n    ".'</a>'."\n    ";
+//		}
 		$s .= '<div class="tern_wp_member_info">';
+        if($o['gravatars'])
+        {
+            $s .= '<td style="width:111px; height=111px">'.get_avatar($u->ID,100) ;
+        }
 		foreach($o['fields'] as $k => $v) {
 			if($v['name'] == 'user_email' and $o['hide_email'] and !is_user_logged_in()) {
 				continue;
@@ -443,7 +447,7 @@ class tern_members {
 				$s .= "\n        ".str_replace('%author_url%',get_author_posts_url($u->ID),str_replace('%value%',$u->$v['name'],$v['markup']));
 			}
 		}
-		return $s."\n    ".'</div>'."\n".'</li>';
+		return $s."\n    ".'</div>'."\n".'</td>';
 	}
 	function sanitize($s) {
 		// to be used in future updates
