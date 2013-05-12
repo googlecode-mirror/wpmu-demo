@@ -50,7 +50,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
             </div>
 
             <div id="create-web-content">
-
+                <form action="step2" class="bg-gray" style="text-align: center">
+                    <h3>ตรวจสอบรหัสตัวแทน ศรีกรุงโบรคเกอร์</h3>
+                    <input type="text" value="" placeholder="กรอกรหัสตัวแทนศรีกรุงของคุณ" style="width: 30%" />
+                    <input type="submit" value="ตรวจสอบ" />
+                </form>
             </div>
 
 
