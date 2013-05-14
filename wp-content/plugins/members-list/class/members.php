@@ -339,7 +339,7 @@ class tern_members {
 						'selected'		=>	array($_REQUEST['by'])
 					)).'<input type="hidden" name="p" value="'.$_REQUEST['p'].'" />
 			<input type="hidden" id="page_id" name="page_id" value="'.$_REQUEST['page_id'].'" />
-			<input type="submit" id="submit" value="Submit" />
+			<input type="submit" id="submit" value="Search" />
 		</form></div>';
 		if($e) { echo $r; }
 		return $r;
