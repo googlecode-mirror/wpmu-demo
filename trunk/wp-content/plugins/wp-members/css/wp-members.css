@@ -199,11 +199,31 @@ see http://rocketgeek.com/tips-and-tricks/load-a-custom-stylesheet/
 	/*text-decoration: none;*/
 	/*text-transform:uppercase;*/
 	/*font-weight:bold;*/
+
+    /*display: inline-block;*/
+    /*padding: .382em 1.618em;*/
+    /*border: 0;*/
+    /*background:#609a00;*/
+    /*color:white;*/
+    /*text-align: center;*/
+    /*text-shadow: 0 -1px 0*/
+    /*rgba(0, 0, 0, 0.3);*/
+    /*text-decoration: none;*/
+    /*font-size: .96em;*/
+    /*font-family: inherit;*/
+    /*font-weight: bold;*/
+    /*cursor: pointer;*/
+    /*overflow: visible;*/
+    /*width: auto;*/
+    /*line-height: 1.618em;*/
+
     display: inline-block;
     padding: .382em 1.618em;
     border: 0;
-    background:#609a00;
-    color:white;
+    background:
+        #609a00;
+    color:
+        white;
     text-align: center;
     text-shadow: 0 -1px 0
     rgba(0, 0, 0, 0.3);
@@ -215,6 +235,16 @@ see http://rocketgeek.com/tips-and-tricks/load-a-custom-stylesheet/
     overflow: visible;
     width: auto;
     line-height: 1.618em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 3px 0 #cbcbcb;
+    -webkit-box-shadow: 2px 2px 3px 0 #b6b6b6;
+    -webkit-border-radius: 0.236em;
+    border-radius: 0.236em;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
 }
 #wpmem_reg .req { color: red; }
 #wpmem_reg .captcha { margin: 5px 0px; }
