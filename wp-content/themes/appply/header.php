@@ -57,7 +57,7 @@ wp_enqueue_script( 'bxSlider' );
     <div id="top-login-bar-wrapper">
         <div style="display: inline-block; padding: 2px;">
             <?php if ( ! is_user_logged_in() ) : ?>
-            <form action="./wp-login.php" method="post" id="form-login-bar">
+            <form action="<?php echo get_site_url() ?>/wp-login.php" method="post" id="form-login-bar">
                 <span style="color: #d0dfe9">Member Login : </span>
                 <input type="text" name="log" id="username-input" alt="username"/>
                 <input type="password" name="pwd" id="password-input" alt="password"/>
