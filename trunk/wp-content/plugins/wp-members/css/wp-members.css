@@ -85,6 +85,8 @@ see http://rocketgeek.com/tips-and-tricks/load-a-custom-stylesheet/
 	margin-top:20px;
 	margin-bottom:20px;
     background-color: #c1dd9d;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
 
 }
 #wpmem_reg legend, #wpmem_login legend {
