@@ -483,9 +483,9 @@ function wpmem_inc_registration_NEW( $toggle = 'new', $heading = '' )
 		</div>';
 			
 	// @todo find a better place to put this
-	$form = $form . '<font class="req">*</font>' . __( 'Required field', 'wp-members' ) . '			
+/*	$form = $form . '<font class="req">*</font>' . __( 'Required field', 'wp-members' ) . '
 
-	</fieldset></form>';
+	</fieldset></form>';*/
 	$form = $form . wpmem_inc_attribution();
 	$form = $form . '</div>[/wpmem_txt]';
 	
@@ -655,7 +655,8 @@ function wpmem_inc_attribution()
 			<small>Powered by <a href="http://rocketgeek.com" target="_blank">WP-Members</a></small>
 		</div>';
 		
-		return $str;
+		//return $str;
+        return "";
 
 	} elseif( $show_attribution == true ) {  // LEGACY FORMS
 
@@ -667,7 +668,7 @@ function wpmem_inc_attribution()
 			  </td>
 			</tr>';
 			
-		return $str;
+		return "";
 			
 	}
 	
