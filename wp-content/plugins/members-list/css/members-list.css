@@ -79,12 +79,23 @@ textarea.tern_members_fields { width:100%; }
 
 #tern_members .tern_wp_members_list
 {
-    width: 100%;
+    margin-left:auto;
+    margin-right:auto;
+    width:90%;
+    box-shadow: 10px 10px 5px #888888;
+
 }
+
+table.tern_wp_member_list tr.alt-table-row
+{
+    background-color: wheat !important;
+    color: firebrick;
+}
+
 #tern_members .tern_wp_members_list tr
 {
     height: 111px;
-    background-color: rgba(221, 255, 203, 0.96) !important;
+    background-color: rgba(130, 197, 95, 0.96) !important;
 }
 #tern_members .tern_wp_members_list td
 {
@@ -105,7 +116,8 @@ select#by {
     padding: 0.236em 0.5em;
 }
 
-#tern_members .tern_wp_members_list {
+#tern_members .tern_wp_members_list
+{
     border: 0;
 }
 #tern_members .tern_wp_members_list td {
