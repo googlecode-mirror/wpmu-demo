@@ -407,7 +407,7 @@ class tern_members {
 		if($t == 'alpha') {
 			$m = ' whose last names begin with the letter "'.strtoupper($q).'".';
 		}
-		$r = '<div class="tern_members_view">Now viewing <b>' . $v . '</b> through <b>' . $this->e . '</b> of <b>'.$this->total.'</b> '.$o['noun'].' found'.$m;
+		$r = '<div class="tern_members_view">Now viewing <b>' . $v . '</b> - <b>' . $this->e . '</b> of <b>'.$this->total.'</b> '.$o['noun'].$m;
 		if($a['pagination'] !== false and $a['pagination'] !== 'false') {
 			$r .= $this->pagination();
 		}
