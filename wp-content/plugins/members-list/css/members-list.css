@@ -88,8 +88,7 @@ textarea.tern_members_fields { width:100%; }
 
 #tern_members .tern_wp_members_list tr.alt-table-row
 {
-    background-color: wheat;
-    color: firebrick;
+    background-color: rgb(200, 237, 198);
 }
 
 #tern_members .tern_wp_members_list tr
