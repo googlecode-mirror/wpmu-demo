@@ -86,16 +86,16 @@ textarea.tern_members_fields { width:100%; }
 
 }
 
-table.tern_wp_member_list tr.alt-table-row
+#tern_members .tern_wp_members_list tr.alt-table-row
 {
-    background-color: wheat !important;
+    background-color: wheat;
     color: firebrick;
 }
 
 #tern_members .tern_wp_members_list tr
 {
     height: 111px;
-    background-color: rgba(130, 197, 95, 0.96) !important;
+    background-color: rgba(130, 197, 95, 0.96);
 }
 #tern_members .tern_wp_members_list td
 {
