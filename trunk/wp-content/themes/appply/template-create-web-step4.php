@@ -7,6 +7,16 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @subpackage Template
  */
 
+session_start();
+
+if(isset($_SESSION["agent_no"])) {
+    $agent_no = $_SESSION["agent_no"];
+} else {
+    wp_redirect("step1");
+    exit;
+}
+
+
  global $woo_options;
  get_header();
 ?>
