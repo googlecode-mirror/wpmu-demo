@@ -7,8 +7,29 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @subpackage Template
  */
 
- global $woo_options;
- get_header();
+session_start();
+unset($_SESSION['agent_no']);
+
+if(strtoupper($_SERVER['REQUEST_METHOD']) == 'POST') {
+    if(isset($_POST['agent_no']) && check_agent_no($_POST['agent_no'])) {
+        $_SESSION["agent_no"] = $_POST["agent_no"];
+        wp_redirect("step2");
+        exit;
+    } else {
+        $error_message = "รหัสตัวแทนของคุณไม่ถูกต้อง";
+    }
+}
+
+function check_agent_no($agent_no) {
+    $agent_query = new WP_User_Query(array("meta_key" => 'agent_no', 'meta_value' => $agent_no));
+    if(empty($agent_query->results))
+        return false;
+    return true;
+}
+
+
+global $woo_options;
+get_header();
 ?>
 
     <div id="content" class="page col-full">
@@ -50,9 +71,12 @@ if ( ! defined( 'ABSPATH' ) ) exit;
             </div>
 
             <div id="create-web-content">
-                <form action="step2" class="bg-gray" style="text-align: center">
+                <?php if(isset($error_message)): ?>
+                <div class="error"><?php echo $error_message ?></div>
+                <?php endif ?>
+                <form action="." method="post" class="bg-gray" style="text-align: center">
                     <h3>ตรวจสอบรหัสตัวแทน ศรีกรุงโบรคเกอร์</h3>
-                    <input type="text" value="" placeholder="กรอกรหัสตัวแทนศรีกรุงของคุณ" style="width: 30%" />
+                    <input type="text" name="agent_no" value="" placeholder="กรอกรหัสตัวแทนศรีกรุงของคุณ" style="width: 30%" />
                     <input type="submit" value="ตรวจสอบ" />
                 </form>
             </div>

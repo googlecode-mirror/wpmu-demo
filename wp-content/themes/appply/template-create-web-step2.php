@@ -7,6 +7,15 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @subpackage Template
  */
 
+session_start();
+
+if(isset($_SESSION["agent_no"])) {
+    $agent_no = $_SESSION["agent_no"];
+} else {
+    wp_redirect("step1");
+    exit;
+}
+
  global $woo_options;
  get_header();
 ?>
@@ -151,7 +160,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
             <div id="create-web-content">
                 <form action="step3" class="bg-gray" id="create-web-agent-info">
-                    <h3>ข้อมูลของผู้สมัคร</h3>
+                    <h3>ข้อมูลของผู้สมัคร (รหัสตัวแทน : <?php echo $agent_no ?>)</h3>
                     <fieldset>
                         <legend>ข้อมูลการติดต่อ</legend>
                         <div class="field">
