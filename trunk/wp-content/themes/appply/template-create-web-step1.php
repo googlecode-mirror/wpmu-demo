@@ -17,7 +17,7 @@ if(strtoupper($_SERVER['REQUEST_METHOD']) == 'POST') {
             wp_redirect("step2");
             exit;
         } else {
-            $error_message = "กรูณากรอกรหัสตัวแทนของคุณเพื่อสร้างเว็บไซต์";
+            $error_message = "กรุณากรอกรหัสตัวแทนของคุณเพื่อสร้างเว็บไซต์";
         }
     } else {
         $error_message = "รหัสตัวแทนของคุณไม่ถูกต้อง";
