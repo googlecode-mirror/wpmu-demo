@@ -42,7 +42,19 @@ function admin_head_logo() {
 }
 add_action( 'admin_head', 'admin_head_logo' );
 
-
+/**
+ * Function : check_agent_no()
+ * check the agent no. and return true when it's exist in the agent DB, otherwise return false.
+ *
+ * @param $agent_no
+ * @return bool
+ */
+function check_agent_no($agent_no) {
+    $agent_query = new WP_User_Query(array("meta_key" => 'agent_no', 'meta_value' => $agent_no));
+    if(empty($agent_query->results))
+        return false;
+    return true;
+}
 
 
 

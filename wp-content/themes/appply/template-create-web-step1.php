@@ -12,19 +12,16 @@ unset($_SESSION['agent_no']);
 
 if(strtoupper($_SERVER['REQUEST_METHOD']) == 'POST') {
     if(isset($_POST['agent_no']) && check_agent_no($_POST['agent_no'])) {
-        $_SESSION["agent_no"] = $_POST["agent_no"];
-        wp_redirect("step2");
-        exit;
+        if($_POST['agent_no'] != "") {
+            $_SESSION["agent_no"] = $_POST["agent_no"];
+            wp_redirect("step2");
+            exit;
+        } else {
+            $error_message = "กรูณากรอกรหัสตัวแทนของคุณเพื่อสร้างเว็บไซต์";
+        }
     } else {
         $error_message = "รหัสตัวแทนของคุณไม่ถูกต้อง";
     }
-}
-
-function check_agent_no($agent_no) {
-    $agent_query = new WP_User_Query(array("meta_key" => 'agent_no', 'meta_value' => $agent_no));
-    if(empty($agent_query->results))
-        return false;
-    return true;
 }
 
 
