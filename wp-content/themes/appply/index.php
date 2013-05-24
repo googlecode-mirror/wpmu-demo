@@ -57,8 +57,10 @@ if ( ! defined( 'ABSPATH' ) ) exit;
         <div id="agent-recommend">
             <div class="agent-slider">
                 <?php
-                $args = array('role' => 'agent'); // TODO : add this args to get_users() for filtering only agent users.
-                $agents = get_users();
+                $args = array('role' => 'agent',
+                    'meta_key' => 'featured_agent',
+                    'meta_value' => 'yes'); // TODO : add this args to get_users() for filtering only agent users.
+                $agents = get_users('role=agent&metakey=featured_agent&meta_value=yes');
                 foreach ($agents as $agent): ?>
                     <div class="slide">
                         <div class="agent-photo"><?php echo get_wp_user_avatar($agent->ID, 100, 'center'); ?></div>
