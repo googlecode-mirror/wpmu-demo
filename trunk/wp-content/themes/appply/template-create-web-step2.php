@@ -16,6 +16,47 @@ if(isset($_SESSION["agent_no"])) {
     exit;
 }
 
+$agent = get_user_from_agent_no($_SESSION["agent_no"]);
+
+if(strtoupper($_SERVER['REQUEST_METHOD']) == 'POST') {
+
+    $error = validate_agent_info($_POST);
+
+    if($error["count"] > 0) { // when have errors on validation.
+        foreach($error["errors"] as $e) {
+            $error_message .= '<li>' . $e["message"] . '</li>';
+        }
+    }
+    else { // when data in form is valid.
+        $agent_attr = array("agent-first", "agent-last", "agent-mobile", "agent-email", "agent-biz-address", "agent-biz-tumbol", "agent-biz-amphore", "agent-biz-province", "agent-biz-zipcode");
+        foreach($agent_attr as $a) {
+            $_SESSION[$a] = $_POST[$a];
+        }
+        wp_redirect("step3");
+        exit;
+    }
+}
+
+function validate_agent_info($agent_info) {
+    $error = array("count" => 0, "errors" => array());
+
+    // do validation code here..
+    if(empty($agent_info["agent-first"]))
+        $error["errors"][] = array("name" => "agent-first", "message" => "กรุณากรอกชื่อของคุณ");
+    if(empty($agent_info["agent-last"]))
+        $error["errors"][] = array("name" => "agent-last", "message" => "กรุณากรอกนามสกุลของคุณ");
+    if(empty($agent_info["agent-mobile"]))
+        $error["errors"][] = array("name" => "agent-mobile", "message" => "กรุณากรอกเบอร์โทรศัพท์ของคุณ");
+    if(empty($agent_info["agent-email"]))
+        $error["errors"][] = array("name" => "agent-email", "message" => "กรุณากรอกอีเมล์ของคุณ");
+
+    // end do validation code.
+    $error["count"] = sizeof($error["errors"]);
+    return $error;
+}
+
+
+
  global $woo_options;
  get_header();
 ?>
@@ -159,55 +200,58 @@ if(isset($_SESSION["agent_no"])) {
             </div>
 
             <div id="create-web-content">
-                <form action="step3" class="bg-gray" id="create-web-agent-info">
+                <?php if(isset($error_message)): ?>
+                    <div class="error"><?php echo $error_message ?></div>
+                <?php endif ?>
+                <form action="" method="post" class="bg-gray" id="create-web-agent-info">
                     <h3>ข้อมูลของผู้สมัคร (รหัสตัวแทน : <?php echo $agent_no ?>)</h3>
                     <fieldset>
                         <legend>ข้อมูลการติดต่อ</legend>
                         <div class="field">
                             <label for="agent-first">ชื่อ</label>
-                            <input type="text" id="agent-first" value="" />
+                            <input type="text" id="agent-first" name="agent-first" value="<?php echo $_POST['agent-first'] ?>" />
                         </div>
                         <div class="field">
                             <label for="agent-last">นามสกุล</label>
-                            <input type="text" id="agent-last" value="" />
+                            <input type="text" id="agent-last" name="agent-last" value="<?php echo $_POST['agent-last'] ?>" />
                         </div>
                         <div class="field">
                             <label for="agent-mobile">เบอร์โทรศัพท์มือถือ</label>
-                            <input type="text" id="agent-mobile" value="" />
+                            <input type="text" id="agent-mobile" name="agent-mobile" value="<?php echo $_POST['agent-mobile'] ?>" />
                         </div>
                         <div class="field">
                             <label for="agent-email">อีเมล์</label>
-                            <input type="text" id="agent-email" value="" />
+                            <input type="text" id="agent-email" name="agent-email" value="<?php echo !empty($_POST['agent-email'])? $_POST['agent-email'] : $agent->user_email ?>" />
                         </div>
                     </fieldset>
-                    <fieldset>
-                        <legend>ข้อมูลธุรกิจ</legend>
-                        <div class="field">
-                            <label for="agent-biz-name">ชื่อหน่วยธุรกิจ</label>
-                            <input type="text" id="agent-biz-name" value="" />
-                        </div>
-                    </fieldset>
+<!--                    <fieldset>-->
+<!--                        <legend>ข้อมูลธุรกิจ</legend>-->
+<!--                        <div class="field">-->
+<!--                            <label for="agent-biz-name">ชื่อหน่วยธุรกิจ</label>-->
+<!--                            <input type="text" id="agent-biz-name" name="agent-biz-name" value="--><?php //echo $_POST['agent-biz-name'] ?><!--" />-->
+<!--                        </div>-->
+<!--                    </fieldset>-->
                     <fieldset>
                         <legend>ที่อยู่ธุรกิจ</legend>
                         <div class="field">
                             <label for="agent-biz-address">ที่อยู่</label>
-                            <textarea id="agent-biz-address" placeholder="เลขที่ / ถนน / ซอย"></textarea>
+                            <textarea id="agent-biz-address" name="agent-biz-address" placeholder="เลขที่ / ถนน / ซอย"><?php echo $_POST['agent-biz-address'] ?></textarea>
                         </div>
                         <div class="field">
                             <label for="agent-biz-tumbol">ตำบล/แขวง</label>
-                            <input type="text" id="agent-biz-tumbol" value="" onchange="codeAddress()" />
+                            <input type="text" id="agent-biz-tumbol" name="agent-biz-tumbol" value="<?php echo $_POST['agent-biz-tumbol'] ?>" onchange="codeAddress()" />
                         </div>
                         <div class="field">
                             <label for="agent-biz-amphore">อำเภอ/เขต</label>
-                            <input type="text" id="agent-biz-amphore" value="" />
+                            <input type="text" id="agent-biz-amphore" name="agent-biz-amphore" value="<?php echo $_POST['agent-biz-amphore'] ?>" />
                         </div>
                         <div class="field">
                             <label for="agent-biz-province">จังหวัด</label>
-                            <input type="text" id="agent-biz-province" value="" />
+                            <input type="text" id="agent-biz-province" name="agent-biz-province" value="<?php echo $_POST['agent-biz-province'] ?>" />
                         </div>
                         <div class="field">
                             <label for="agent-biz-zipcode">รหัสไปรษณีย์</label>
-                            <input type="text" id="agent-biz-zipcode" value="" />
+                            <input type="text" id="agent-biz-zipcode" name="agent-biz-zipcode" value="<?php echo $_POST['agent-biz-zipcode'] ?>" />
                         </div>
                         <div id="map_canvas"></div>
                     </fieldset>

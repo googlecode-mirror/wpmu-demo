@@ -16,6 +16,25 @@ if(isset($_SESSION["agent_no"])) {
     exit;
 }
 
+$agent = get_user_from_agent_no($_SESSION["agent_no"]);
+
+if(strtoupper($_SERVER['REQUEST_METHOD']) == 'POST') {
+
+    // make sure the domain isn't a reserved word, when subdomain in not install.
+    $subdirectory_reserved_names = apply_filters( 'subdirectory_reserved_names', array( 'page', 'comments', 'blog', 'files', 'feed' ) );
+    if ( in_array( $_POST['site-url'], $subdirectory_reserved_names ) ) {
+        $error_message .= '<li>' . sprintf( __('คุณไม่สามารถตั้งชื่อเว็บไซต์ด้วยคำสงวนเหล่านี้ได้ : <code>%s</code>' ), implode( '</code>, <code>', $subdirectory_reserved_names ) ) . '</li>';
+    } // check url format and empty.
+    elseif ( ! preg_match( '|^([a-zA-Z0-9-])+$|', $_POST['site-url'] ) ) {
+        $error_message .= '<li>URL ของคุณไม่ถูกต้อง</li>';
+    }
+    else {
+        $_SESSION['site-url'] = strtolower( $_POST['site-url'] );
+        wp_redirect("step4");
+        exit;
+    }
+}
+
  global $woo_options;
  get_header();
 ?>
@@ -59,10 +78,13 @@ if(isset($_SESSION["agent_no"])) {
             </div>
 
             <div id="create-web-content">
-                <form action="step4" class="bg-gray" style="text-align: center">
+                <?php if(isset($error_message)): ?>
+                    <div class="error"><?php echo $error_message ?></div>
+                <?php endif ?>
+                <form action="" method="post" class="bg-gray" style="text-align: center">
                     <h3>เลือกชื่อเว็บไซต์</h3>
                     <span style="font-size: 18px;">http://www.srikrung.com/</span>
-                    <input type="text" value="" placeholder="กรอกชื่อเว็บไซต์ที่ต้องการ (ภาษาอังกฤษ)" style="width: 30%" />
+                    <input type="text" name="site-url" value="<?php echo $_POST['site-url'] ?>" placeholder="กรอกชื่อเว็บไซต์ที่ต้องการ (ภาษาอังกฤษ)" style="width: 30%" />
                     <input type="submit" value="ตรวจสอบ" />
                 </form>
             </div>

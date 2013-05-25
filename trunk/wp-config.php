@@ -81,6 +81,7 @@ define('WPLANG', 'th_TH');
 define('WP_DEBUG', false);
 
 /* Multisite */
+define('WP_DEFAULT_THEME', 'attitude');
 define('WP_ALLOW_MULTISITE', true);
 define('MULTISITE', true);
 define('SUBDOMAIN_INSTALL', false);
