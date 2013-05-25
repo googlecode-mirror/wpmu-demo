@@ -56,6 +56,19 @@ function check_agent_no($agent_no) {
     return true;
 }
 
+/**
+ * Function : check_agent_no()
+ * check the agent no. and return true when it's exist in the agent DB, otherwise return false.
+ *
+ * @param $agent_no
+ * @return bool
+ */
+function get_user_from_agent_no($agent_no) {
+    $agents = get_users(array('meta_key' => 'agent_no', 'meta_value' => $agent_no));
+    foreach($agents as $a)
+        return $a;
+}
+
 
 
 
