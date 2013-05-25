@@ -63,7 +63,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
                 $agents = get_users('role=agent&metakey=featured_agent&meta_value=yes');
                 foreach ($agents as $agent): ?>
                     <div class="slide">
-                        <div class="agent-photo"><?php echo get_wp_user_avatar($agent->ID, 100, 'center'); ?></div>
+<!--                        <div class="agent-photo">--><?php //echo get_wp_user_avatar($agent->ID, 100, 'center'); ?><!--</div>-->
+                        <div class="agent-photo"><?php echo get_avatar( $agent->ID, 100 ); ?>
+                        </div>
                         <div class="agent-name"><?php echo $agent->display_name ?><br><?php echo get_user_meta($agent->ID, 'user_branch', true) ?></div>
                     </div>
                 <?php endforeach ?>
