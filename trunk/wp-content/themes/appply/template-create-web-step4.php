@@ -26,6 +26,8 @@ if(strtoupper($_SERVER['REQUEST_METHOD']) == 'POST') {
             "title" => '' . $_SESSION['site-url'] . '- by Srikrung'
         );
 
+        wpmu_validate_blog_signup($_POST['blog']['domain'], $_POST['blog']['title']);
+
         update_agent_info($_SESSION);
         create_microweb();
 
@@ -97,6 +99,7 @@ function create_microweb() {
     $id = wpmu_create_blog( $newdomain, $path, $title, $user_id , array( 'public' => 1 ), $current_site->id );
 
     if ( !is_wp_error( $id ) ) {
+        update_user_meta($user_id, "agent-web", $path);
         if ( !is_super_admin( $user_id ) && !get_user_option( 'primary_blog', $user_id ) )
             update_user_option( $user_id, 'primary_blog', $id, true );
         $content_mail = sprintf( __( 'New site created by %1$s
@@ -111,6 +114,40 @@ Name: %3$s' ), $current_user->user_login , get_site_url( $id ), stripslashes( $t
     } else {
         wp_die( $id->get_error_message() );
     }
+}
+
+// TODO : Remove this method, It's still not work now.
+function create_microweb_default_page($user_id) {
+    global $wpdb, $wp_rewrite, $current_site, $table_prefix;
+
+    $now = date('Y-m-d H:i:s');
+    $now_gmt = gmdate('Y-m-d H:i:s');
+    $about_srikrung_page_guid = get_option('home') . '/?p=3';
+
+    // First Page
+    $about_srikrung_page = 'นี่คือหน้า static ที่เขียนเพิ่มนะ. <img class="aligncenter size-full wp-image-412" alt="SK Bio For Web-01" src="http://localhost/srikrung/wp-content/uploads/2013/06/SK-Bio-For-Web-011.jpg" width="800" height="600" />';
+
+    if ( is_multisite() )
+        $about_srikrung_page = get_site_option( 'first_page', $about_srikrung_page );
+    // $first_post_guid = get_option('home') . '/?page_id=2';
+    $wpdb->insert( $wpdb->posts, array(
+        'post_author' => $user_id,
+        'post_date' => $now,
+        'post_date_gmt' => $now_gmt,
+        'post_content' => $about_srikrung_page,
+        'post_excerpt' => '',
+        'post_title' => __( 'เกี่ยวกับศรีกรุง' ),
+        /* translators: Default page slug */
+        'post_name' => __( 'about-srikrung' ),
+        'post_modified' => $now,
+        'post_modified_gmt' => $now_gmt,
+        'guid' => $about_srikrung_page_guid,
+        'post_type' => 'page',
+        'to_ping' => '',
+        'pinged' => '',
+        'post_content_filtered' => ''
+    ));
+    $wpdb->insert( $wpdb->postmeta, array( 'post_id' => 3, 'meta_key' => '_wp_page_template', 'meta_value' => 'default' ) );
 }
 
 global $woo_options;

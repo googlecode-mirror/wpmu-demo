@@ -179,37 +179,36 @@ To delete a comment, just log in and view the post&#039;s comments. There you wi
 								'comment_content' => $first_comment
 								));
 
-	// First Page
-	$first_page = sprintf( __( "This is an example page. It's different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:
 
-<blockquote>Hi there! I'm a bike messenger by day, aspiring actor by night, and this is my blog. I live in Los Angeles, have a great dog named Jack, and I like pi&#241;a coladas. (And gettin' caught in the rain.)</blockquote>
+    /**
+     * =============== About Srikrung Page =================
+     * Statis page created when create new multisite.
+     * Page Title : เกี่ยวกับศรีกรุงโปรคเกอร์
+     * ======================================================
+     */
+    $first_page = '<img class="aligncenter size-full wp-image-412" alt="SK Bio For Web-01" src="http://localhost/srikrung/wp-content/uploads/2013/06/SK-Bio-For-Web-011.jpg" width="800" height="600" />';
+    $first_post_guid = get_option('home') . '/?page_id=2';
+    $wpdb->insert( $wpdb->posts, array(
+        'post_author' => $user_id,
+        'post_date' => $now,
+        'post_date_gmt' => $now_gmt,
+        'post_content' => $first_page,
+        'post_excerpt' => '',
+        'post_title' => __( 'รู้จักศรีกรุงโปรคเกอร์' ),
+        /* translators: Default page slug */
+        'post_name' => sanitize_title( _x('รู้จักศรีกรุงโปรคเกอร์', 'Default post slug') ),
+        'post_modified' => $now,
+        'post_modified_gmt' => $now_gmt,
+        'guid' => $first_post_guid,
+        'post_type' => 'page',
+        'to_ping' => '',
+        'pinged' => '',
+        'post_content_filtered' => '',
+        'comment_status' => 'closed'
+    ));
+    $wpdb->insert( $wpdb->postmeta, array( 'post_id' => 2, 'meta_key' => '_wp_page_template', 'meta_value' => 'default' ) );
+    // ----------- End create about Srikrung page.
 
-...or something like this:
-
-<blockquote>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</blockquote>
-
-As a new WordPress user, you should go to <a href=\"%s\">your dashboard</a> to delete this page and create new pages for your content. Have fun!" ), admin_url() );
-	if ( is_multisite() )
-		$first_page = get_site_option( 'first_page', $first_page );
-	$first_post_guid = get_option('home') . '/?page_id=2';
-	$wpdb->insert( $wpdb->posts, array(
-								'post_author' => $user_id,
-								'post_date' => $now,
-								'post_date_gmt' => $now_gmt,
-								'post_content' => $first_page,
-								'post_excerpt' => '',
-								'post_title' => __( 'Sample Page' ),
-								/* translators: Default page slug */
-								'post_name' => __( 'sample-page' ),
-								'post_modified' => $now,
-								'post_modified_gmt' => $now_gmt,
-								'guid' => $first_post_guid,
-								'post_type' => 'page',
-								'to_ping' => '',
-								'pinged' => '',
-								'post_content_filtered' => ''
-								));
-	$wpdb->insert( $wpdb->postmeta, array( 'post_id' => 2, 'meta_key' => '_wp_page_template', 'meta_value' => 'default' ) );
 
 	// Set up default widgets for default theme.
 	update_option( 'widget_search', array ( 2 => array ( 'title' => '' ), '_multiwidget' => 1 ) );
