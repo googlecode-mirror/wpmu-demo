@@ -69,7 +69,7 @@ body, input, textarea {
 	word-wrap: break-word;
 }
 body {
-	background: url("images/body-bg.png") #ececec;
+	background: url("../appply/images/bg-main.png") #ececec;
 }
 .wrapper {
 	max-width: 1038px;
