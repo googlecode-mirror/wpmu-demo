@@ -1,0 +1,407 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-29 18:38+0200\n"
+"PO-Revision-Date: 2012-07-29 18:38+0200\n"
+"Last-Translator: lidplussdesign <lidplussdesign@hotmail.com>\n"
+"Language-Team: lidplussdesign\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:14
+#: search.php:22
+msgid "Nothing Found"
+msgstr ""
+
+#: 404.php:15
+msgid "Sorry, the post you are looking for is not available. Maybe you want to perform a search?"
+msgstr ""
+
+#: 404.php:20
+#: search.php:28
+msgid "Search"
+msgstr ""
+
+#: 404.php:27
+#: search.php:35
+msgid "Available Pages:"
+msgstr ""
+
+#: 404.php:33
+#: search.php:41
+msgid "Archives by Categories:"
+msgstr ""
+
+#: 404.php:39
+#: search.php:47
+msgid "Archives by Date:"
+msgstr ""
+
+#: archive-portfolio.php:19
+#: taxonomy-portfolio_category.php:19
+msgid "No Categories"
+msgstr ""
+
+#: archive-portfolio.php:34
+#: archive-portfolio.php:58
+#: archive-portfolio.php:63
+#: taxonomy-portfolio_category.php:34
+#: taxonomy-portfolio_category.php:58
+#: taxonomy-portfolio_category.php:63
+#: taxonomy-portfolio_tags.php:34
+#: taxonomy-portfolio_tags.php:58
+#: taxonomy-portfolio_tags.php:63
+msgid "view more"
+msgstr ""
+
+#: comments.php:7
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: comments.php:34
+msgid "Comments are now closed for this article."
+msgstr ""
+
+#: comments.php:44
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:80
+msgid "Name"
+msgstr ""
+
+#: comments.php:80
+#: comments.php:82
+msgid "*"
+msgstr ""
+
+#: comments.php:82
+msgid "Email"
+msgstr ""
+
+#: comments.php:82
+msgid "(never pulished)"
+msgstr ""
+
+#: comments.php:84
+#: template-contact.php:100
+msgid "Website"
+msgstr ""
+
+#: comments.php:88
+#: template-contact.php:101
+msgid "Your Commnet*"
+msgstr ""
+
+#: comments.php:92
+msgid "Submit Comment"
+msgstr ""
+
+#: footer.php:72
+msgid "Stay in Touch via Social Networks"
+msgstr ""
+
+#: header.php:212
+msgid "we said,"
+msgstr ""
+
+#: header.php:213
+msgid "we"
+msgstr ""
+
+#: header.php:214
+msgid "we were"
+msgstr ""
+
+#: header.php:215
+msgid "we replied to"
+msgstr ""
+
+#: header.php:216
+msgid "we were checking out"
+msgstr ""
+
+#: header.php:217
+msgid "loading tweets..."
+msgstr ""
+
+#: header.php:248
+msgid "Twitter"
+msgstr ""
+
+#: index.php:17
+#: page.php:19
+#: search.php:23
+#: single-portfolio.php:33
+#: single.php:19
+#: template-contact.php:131
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: single-portfolio.php:63
+msgid "Share:"
+msgstr ""
+
+#: taxonomy-portfolio_tags.php:19
+msgid "No Tags"
+msgstr ""
+
+#: template-contact.php:94
+msgid "Get in Touch"
+msgstr ""
+
+#: template-contact.php:98
+msgid "Your Name*"
+msgstr ""
+
+#: template-contact.php:99
+msgid "Email*"
+msgstr ""
+
+#: template-contact.php:103
+msgid "Submit a message"
+msgstr ""
+
+#: template-cse.php:33
+msgid "Loading..."
+msgstr ""
+
+#: template-cse.php:35
+msgid "Enter a Google (custom search engine) ID in theme options."
+msgstr ""
+
+#: template-full-width.php:27
+msgid "Sorry, but you are looking for something that isn't here."
+msgstr ""
+
+#: template-portfolio-1.php:26
+#: template-portfolio-2.php:26
+#: template-portfolio-3-left-sidebar.php:26
+#: template-portfolio-3-sidebar.php:26
+#: template-portfolio-3.php:26
+#: template-portfolio-4.php:26
+msgid "All Categories"
+msgstr ""
+
+#: template-sitemap.php:19
+msgid "Latest Blog Posts"
+msgstr ""
+
+#: functions/theme_breadcrumb.php:17
+msgid "Home"
+msgstr ""
+
+#: functions/theme_breadcrumb.php:38
+msgid "Portfolio"
+msgstr ""
+
+#: functions/theme_breadcrumb.php:89
+msgid "404 Error"
+msgstr ""
+
+#: functions/theme_breadcrumb.php:100
+msgid "Archives"
+msgstr ""
+
+#: functions/theme_breadcrumb.php:109
+msgid "&nbsp;&rarr; Category"
+msgstr ""
+
+#: functions/theme_breadcrumb.php:114
+msgid "&nbsp;&rarr; Tag"
+msgstr ""
+
+#: functions/theme_breadcrumb.php:119
+msgid "&nbsp;&rarr; Portfolio Category"
+msgstr ""
+
+#: functions/theme_breadcrumb.php:124
+msgid "&nbsp;&rarr; Portfolio Tag"
+msgstr ""
+
+#: functions/theme_breadcrumb.php:131
+msgid "Search for:"
+msgstr ""
+
+#: functions/theme_comments.php:12
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions/widget-accordion.php:101
+#: functions/widget-carousel.php:156
+#: functions/widget-contact.php:101
+#: functions/widget-cse.php:112
+#: functions/widget-news.php:162
+#: functions/widget-portfolio.php:289
+#: functions/widget-post-tabs.php:211
+#: functions/widget-posts.php:139
+#: functions/widget-posts2.php:178
+#: functions/widget-search.php:37
+msgid "Title:"
+msgstr ""
+
+#: functions/widget-accordion.php:110
+msgid "Shortcode for displaying an accordion."
+msgstr ""
+
+#: functions/widget-carousel.php:162
+#: functions/widget-portfolio.php:307
+#: functions/widget-posts.php:145
+#: functions/widget-posts2.php:184
+msgid "Number of posts to show:"
+msgstr ""
+
+#: functions/widget-contact.php:110
+msgid "Code for displaying contact details."
+msgstr ""
+
+#: functions/widget-cse.php:118
+msgid "Enter the page id:"
+msgstr ""
+
+#: functions/widget-news.php:72
+msgid "read more"
+msgstr ""
+
+#: functions/widget-news.php:168
+#: functions/widget-portfolio.php:295
+msgid "Text:"
+msgstr ""
+
+#: functions/widget-news.php:173
+#: functions/widget-portfolio.php:319
+msgid "Automatically add paragraphs"
+msgstr ""
+
+#: functions/widget-portfolio.php:301
+msgid "Button Url:"
+msgstr ""
+
+#: functions/widget-portfolio.php:313
+msgid "Categories Filter:"
+msgstr ""
+
+#: functions/widget-portfolio.php:315
+msgid "(enter categories [slugs separated by commas] you would like to display)"
+msgstr ""
+
+#: functions/widget-post-tabs.php:66
+msgid "Popular"
+msgstr ""
+
+#: functions/widget-post-tabs.php:67
+msgid "Recent"
+msgstr ""
+
+#: functions/widget-post-tabs.php:68
+msgid "Tags"
+msgstr ""
+
+#: functions/widget-post-tabs.php:217
+msgid "Amount to show popular post:"
+msgstr ""
+
+#: functions/widget-post-tabs.php:223
+msgid "Amount to show recent post:"
+msgstr ""
+
+#: functions/widget-service.php:217
+#: functions/widget-service.php:253
+#: functions/widget-service.php:289
+msgid "Dropcap:"
+msgstr ""
+
+#: functions/widget-service.php:223
+#: functions/widget-service.php:259
+#: functions/widget-service.php:295
+msgid "Dropcap style:"
+msgstr ""
+
+#: functions/widget-service.php:225
+#: functions/widget-service.php:261
+#: functions/widget-service.php:297
+msgid "Style 1"
+msgstr ""
+
+#: functions/widget-service.php:226
+#: functions/widget-service.php:262
+#: functions/widget-service.php:298
+msgid "Style 2"
+msgstr ""
+
+#: functions/widget-service.php:227
+#: functions/widget-service.php:263
+#: functions/widget-service.php:299
+msgid "Style 3"
+msgstr ""
+
+#: functions/widget-service.php:239
+#: functions/widget-service.php:275
+#: functions/widget-service.php:311
+msgid "Subtitle:"
+msgstr ""
+
+#: functions/widget-tabs.php:110
+msgid "Shortcode for displaying a tabs."
+msgstr ""
+
+#: functions/widget-testimonial.php:132
+msgid "Cite:"
+msgstr ""
+
+#: functions/widget-toggle.php:110
+msgid "Shortcode for displaying a toggle."
+msgstr ""
+
+#: functions/widget-twitter.php:82
+msgid "Enter to a username in a widget."
+msgstr ""
+
+#: functions/widget-twitter.php:131
+msgid "Username:"
+msgstr ""
+
+#: functions/widget-twitter.php:137
+msgid "Number of tweets to show:"
+msgstr ""
+
+#: includes/blog-post.php:12
+msgid "Read More"
+msgstr ""
+
+#: includes/blog-post.php:37
+#: includes/single-post.php:30
+msgid "by"
+msgstr ""
+
+#: includes/blog-post.php:39
+#: includes/single-post.php:32
+msgid "posted in"
+msgstr ""
+
+#: includes/single-portfolio-post.php:23
+msgid "More Images"
+msgstr ""
+
+#: includes/single-portfolio-post.php:30
+msgid "view image"
+msgstr ""
+
+#: includes/single-portfolio-post.php:40
+msgid "Leave a Comment"
+msgstr ""
+
+#: includes/single-post.php:50
+msgid "Tags:"
+msgstr ""
+
+#: sliders/LayerSlider/settings.php:497
+#: sliders/LayerSlider/settings.php:1084
+msgid "Save Changes"
+msgstr ""
+

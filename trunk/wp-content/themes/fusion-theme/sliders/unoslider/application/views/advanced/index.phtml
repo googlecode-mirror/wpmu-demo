@@ -1,0 +1,16 @@
+<div id="advanced">
+	
+	<ul class="header tabs">
+		<li class="active"><a href="#tab_layers" title="Animated Layers" data-toggle="tab" >Animated Layers</a></li>
+		<li><a href="#tab_tooltip" title="Tooltip" data-toggle="tab" >Caption</a></li>
+	</ul>
+
+	<div class="content active" id="tab_layers">	<?php echo $this->partial('layers', array('styles' => $this->styles)); ?></div>
+	<div class="content" id="tab_tooltip">	<?php echo $this->partial('tooltip', array()); ?></div>
+
+	<div class="colorbox-footer">
+		<a href="#" class="us-button-done advanced_save" title="Save and Close">I'm done with editing</a>
+		<a href="#" class="us-button cancel" title="Don't Save">Cancel</a>
+	</div>
+
+</div><!-- /advanced -->

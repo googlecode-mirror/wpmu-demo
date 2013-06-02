@@ -1,0 +1,80 @@
+<div class="row">
+	<h4>Blocks</h4>
+	<div class="span13">
+		<label for="undr_block_vertical"><dfn title="Number of blocks vertically">Vertical</dfn></label>
+
+		<div class="input-append">
+			<input type="text" name="undr_block_vertical" id="undr_block_vertical" class="span3" value="<?php echo $this->options['block']['vertical']; ?>" />
+			<span class="add-on">blocks</span>
+		</div>
+	</div>
+
+	<div class="span11">
+		<label for="undr_block_horizontal"><dfn title="Number of blocks horizontally">Horizontal</dfn></label>
+		<div class="input-append">
+			<input type="text" name="undr_block_horizontal" id="undr_block_horizontal" class="span3" value="<?php echo $this->options['block']['horizontal']; ?>" />
+			<span class="add-on">blocks</span>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<h4>Timing</h4>
+	<div class="span13">
+		<label for="undr_animation_speed"><dfn title="Duration of animation">Speed</dfn></label>
+		<div class="input-append">
+			<input type="text" name="undr_animation_speed" id="undr_animation_speed" class="span4" value="<?php echo $this->options['animation']['speed']; ?>" />
+			<span class="add-on">ms.</span>
+		</div>
+	</div>
+	
+	<div class="span11">
+		<label for="undr_animation_delay"><dfn title="Delay between blocks">Delay</dfn></label>
+		<div class="input-append">
+			<input type="text" name="undr_animation_delay" id="undr_animation_delay" class="span4" value="<?php echo $this->options['animation']['delay']; ?>" />
+			<span class="add-on">ms.</span>
+		</div>
+	</div>
+</div>
+
+
+<div class="row">
+	<h4>Animation</h4>
+	<div class="span13">
+		<label for="undr_transition" class="gap"><dfn title="Type of animation applied to blocks">Transition</dfn></label>
+		<select name="undr_transition" id="undr_transition" class="undr_transition">
+			<?php foreach($this->transitions as $transition => $variations): ?>
+			<option value="<?php print $transition; ?>" <?php selected( $this->options['animation']['transition'], $transition ); ?>><?php print $transition; ?></option>
+			<?php endforeach; ?>
+		</select>
+	
+		<label for="undr_variation" class="gap"><dfn title="Variation of selected transition">Variation</dfn></label>
+		<select name="undr_variation" id="undr_variation" class="undr_variation">
+			<?php foreach($this->transitions[$this->options['animation']['transition']] as $variation): ?>
+			<option value="<?php print $variation; ?>" <?php selected( $this->options['animation']['variation'], $variation ); ?>><?php print $variation; ?></option>
+			<?php endforeach; ?>
+		</select>
+	</div>
+	
+	
+	<div class="span11">
+		<label for="undr_pattern" class="gap"><dfn title="Pattern in which transition is applied">Pattern</dfn></label>
+		<select name="undr_pattern" id="undr_pattern" class="undr_pattern">
+			<?php foreach($this->patterns as $pattern => $directions): ?>
+			<option value="<?php print $pattern; ?>" <?php selected( $this->options['animation']['pattern'], $pattern ); ?>><?php print $pattern; ?></option>
+			<?php endforeach; ?>
+		</select>
+	
+	
+		<label for="undr_direction" class="gap"><dfn title="Direction modifier for pattern">Direction</dfn></label>
+		<select name="undr_direction" id="undr_direction" class="undr_direction">
+			<?php foreach($this->patterns[$this->options['animation']['pattern']] as $direction): ?>
+			<option value="<?php print $direction; ?>" <?php selected( $this->options['animation']['direction'], $direction ); ?>><?php print $direction; ?></option>
+			<?php endforeach; ?>
+		</select>
+	</div>
+</div>
+
+<input type="hidden" name="preset_id" id="preset_id" />
+
+<a href="#" class="us-button save_as_preset">Save this transition as a new Preset</a>

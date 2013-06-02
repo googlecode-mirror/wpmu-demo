@@ -1,0 +1,129 @@
+	<ul id="unoslider-<?php print $this->id; ?>" class="unoslider unoslider_theme_<?php print $this->theme; ?>">
+		<?php $img_id = 0; ?>
+		<?php foreach($this->slides as $id => $slide): ?>
+			<li>
+
+				<?php if(!empty($this->tooltips[$id])): ?>
+					<div class="unoslider_caption"><?php echo $this->tooltips[$id]; ?></div>
+				<?php endif; ?>
+
+
+				<?php if(!empty($this->layers[$id])): ?>
+					<div class="unoslider_layers">
+						<?php foreach($this->layers[$id] as $layer): ?>
+							<div class="<?php echo $layer['style']; ?> <?php echo $layer['animation']; ?>" style="
+							top:<?php echo $layer['top'];?>px;
+							left:<?php echo $layer['left'];?>px;
+							width:<?php echo $layer['width'];?>px;
+							height:<?php echo $layer['height'];?>px;
+							"><?php echo $layer['content']; ?></div>
+						<?php endforeach; ?>
+					</div>
+				<?php endif; ?>
+
+				<?php	
+					if(preg_match("/(jpg|png|gif)$/", $slide)): 
+						if(!empty($this->links['href'][$img_id])): ?>
+							<a href="<?php echo $this->links['href'][$img_id]; ?>" target="<?php echo $this->links['target'][$img_id]; ?>">
+						<?php endif; ?>
+
+						<img src="<?php print $slide; ?>" />
+
+						<?php if(!empty($this->links['href'][$img_id])): ?>
+							</a>
+						<?php endif;
+						$img_id++;
+					else:
+						$is_in_div = preg_match("/^<div/i", $slide);
+						if (!$is_in_div) {	echo "<div>";	}
+							echo stripslashes($slide); 
+						if (!$is_in_div) {	echo "</div>";	}
+					endif; 
+				?>
+				
+			</li>
+		<?php endforeach; ?>
+	</ul>
+
+<script type='text/javascript'>
+	jQuery(document).ready(function(){	
+
+
+		<?php if(empty($this->options['indicator'])): ?>
+			var indicator = false;
+		<?php else: ?>
+			var indicator = {
+				autohide: <?php print $this->options['indicator']['autohide'] ? 'true' : 'false'; ?>
+			};
+		<?php endif; ?>
+
+
+		<?php if(empty($this->options['slideshow'])): ?>
+			var slideshow = false;
+		<?php else: ?>			
+			var slideshow = {
+				speed: <?php print $this->options['slideshow']['speed']; ?>,
+				autostart: <?php print $this->options['slideshow']['autostart'] ? 'true' : 'false'; ?>,
+				timer: <?php print $this->options['slideshow']['timer'] ? 'true' : 'false'; ?>,
+				hoverPause: <?php print $this->options['slideshow']['hoverPause'] ? 'true' : 'false'; ?>,
+				continuous: <?php print $this->options['slideshow']['continuous'] ? 'true' : 'false'; ?>,
+				infinite: <?php print $this->options['slideshow']['infinite'] ? 'true' : 'false'; ?>
+			};
+		<?php endif; ?>
+
+
+		<?php if(empty($this->navigation)): ?>
+			var navigation = false;
+		<?php else: ?>	
+
+			var navigation = {
+				autohide: <?php print $this->navigation; ?>,
+				stop: '<?php print $this->options['navigation']['stop']; ?>',
+				play: '<?php print $this->options['navigation']['play']; ?>',
+				next: '<?php print $this->options['navigation']['next']; ?>',
+				prev: '<?php print $this->options['navigation']['prev']; ?>'
+			};
+		<?php endif; ?>
+
+		var animation = {
+			speed: parseInt(<?php print $this->options['animation']['speed']; ?>),
+			delay: parseInt(<?php print $this->options['animation']['delay']; ?>),
+			transition: '<?php print $this->options['animation']['transition']; ?>',
+			variation: '<?php print $this->options['animation']['variation']; ?>',
+			pattern: '<?php print $this->options['animation']['pattern']; ?>',
+			direction: '<?php print $this->options['animation']['direction']; ?>'
+		};
+
+		var block = {
+			vertical: parseInt(<?php print $this->options['block']['vertical']; ?>),
+			horizontal: parseInt(<?php print $this->options['block']['horizontal']; ?>)
+		};
+
+		var preset = 0;
+		<?php if(!empty($this->presets)): ?>
+			var preset = <?php print $this->presets; ?>
+		<?php endif; ?>
+
+		var order = 'in-order';
+		<?php if(!empty($this->options['presets_order'])): ?>
+			var order = 'random';
+		<?php endif; ?>
+
+		var slider = jQuery('#unoslider-<?php print $this->id; ?>').unoslider({
+			width: <?php print $this->width; ?>
+			,height: <?php print $this->height; ?>
+			,scale: <?php print $this->options['scale'] ? 'true' : 'false'; ?>
+			,responsive: <?php print $this->options['responsive'] ? 'true' : 'false'; ?>
+			,responsiveLayers: <?php print $this->options['responsive_layers'] ? 'true' : 'false'; ?>
+			,touch: <?php print $this->options['touch'] ? 'true' : 'false'; ?>
+			,mobile: <?php print $this->options['mobile'] ? 'true' : 'false'; ?>
+			,indicator: indicator
+			,navigation: navigation
+			,slideshow: slideshow
+			,animation: animation
+			,block: block
+			,preset: preset
+			,order: order
+		});
+	});
+</script>

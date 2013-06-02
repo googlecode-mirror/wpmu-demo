@@ -1,0 +1,33 @@
+	<li class="slide">
+		<span class="handler"><img src="<?php echo UNOSLIDER_PATH; ?>public/images/handler.png" /></span>
+		
+		<div class="thumb-container html_content">
+			<div class="thumb-overlay">
+				<a href="#" class="open_html_editor edit" title="Edit HTML content">Edit content</a>
+			</div>
+			<span>HTML content</span>			
+		</div>
+		
+		<ul class="tabs editor">
+			<li class="active"><a href="#tab_html_title_<?php echo $id; ?>" data-toggle="tab">Caption</a></li>
+			<li><a href="#" class="open_advanced">Advanced</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div class="tab-pane active" id="tab_html_title_<?php echo $id; ?>">
+				<input type="text" class="caption input" name="tooltip[]" value="<?php echo stripslashes(htmlspecialchars($this->tooltips[$id])); ?>" />
+			</div>
+		</div>
+
+		<input type="hidden" class="html_data preview_item" name="slide_data[]" value="<?php echo stripslashes(htmlspecialchars($slide)); ?>" />
+		<input type="hidden" class="layers" name="layers[]" value="<?php echo htmlspecialchars(json_encode($this->layers[$id])); ?>" />
+
+
+		<ul class="options">
+			<li><a href="#" class="remove"><img src="<?php echo UNOSLIDER_PATH; ?>public/images/cross.png" title="Remove" alt="Remove" /></a></li>
+			<li><a href="#" class="clone"><img src="<?php echo UNOSLIDER_PATH; ?>public/images/clone.png" alt="Clone" title="Clone" /></a></li>
+		</ul>
+
+			<br class="clear" />
+	</li>
+

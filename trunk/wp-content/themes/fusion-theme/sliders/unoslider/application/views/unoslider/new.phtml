@@ -1,0 +1,329 @@
+<div id="unoslider" class="metabox-holder">
+
+	<!-- templates -->
+	<ul id="tpls">
+		<!-- Template for new HTML slides -->
+		<li class="html_template slide">
+			<span class="handler"><img src="<?php echo UNOSLIDER_PATH; ?>public/images/handler.png" /></span>
+
+			<div class="thumb-container html_content">
+				<div class="thumb-overlay">
+					<a href="#" class="open_html_editor edit" title="Edit HTML content">Edit content</a>
+				</div>
+				<span>HTML content</span>
+			</div>
+
+			<ul class="tabs editor">
+				<li class="active"><a href="#" data-toggle="tab">Caption</a></li>
+				<li><a href="#" class="open_advanced">Advanced</a></li>
+			</ul>
+
+			<div class="tab-content">
+				<div class="tab-pane active" id="">
+					<input type="text" class="caption input" name="tooltip[]" value="" />
+				</div>
+			</div>
+
+			<input type="hidden" class="html_data preview_item" name="slide_data[]" />
+			<input type="hidden" class="layers" name="layers[]" />
+
+			<ul class="options">
+				<li><a href="#" class="remove"><img src="<?php echo UNOSLIDER_PATH; ?>public/images/cross.png" title="Remove" alt="Remove" /></a></li>
+				<li><a href="#" class="clone"><img src="<?php echo UNOSLIDER_PATH; ?>public/images/clone.png" alt="Clone" title="Clone" /></a></li>
+			</ul>
+			<br class="clear" />
+		</li>
+
+
+		<!-- Template for new image slides -->
+		<li class="template slide">
+			<span class="handler"><img src="<?php echo UNOSLIDER_PATH; ?>public/images/handler.png" /></span>
+
+			<div class="thumb-container">
+				<div class="thumb-overlay">
+					<a href="#" class="change-image-button">Change Image</a>
+				</div>
+			</div>
+
+			<ul class="tabs editor">
+				<li class="active"><a href="#" data-toggle="tab">Caption</a></li>
+				<li><a href="#" data-toggle="tab">Link</a></li>
+				<li><a href="#" class="open_advanced">Advanced</a></li>
+			</ul>
+
+			<div class="tab-content">
+			  <div class="tab-pane active" id="">
+					<input type="text" class="caption input" name="tooltip[]" />
+			  </div>
+
+			  <div class="tab-pane" id="">
+			  	<div class="labeled_input">
+					  <label class="inset hide-if-no-js">http:// </label>
+						<input type="text" class="imglink input inset " name="imglink[]" value="" />
+						<select name="linktarget[]" class="linktarget">
+							<?php
+								$targets = array('_self', '_blank', '_parent', '_top');
+								foreach ($targets as $target):
+							?>
+								<option value="<?php echo $target; ?>" ><?php echo $target; ?></option>
+							<?php endforeach; ?>
+
+						</select>
+					</div>
+			  </div>
+
+			</div>
+
+			<input type="hidden" class="imgurl preview_item" name="slide_data[]" />
+			<input type="hidden" class="layers" name="layers[]" value="" />
+
+			<ul class="options">
+				<li><a href="#" class="remove"><img src="<?php echo UNOSLIDER_PATH; ?>public/images/cross.png" title="Remove" alt="Remove" /></a></li>
+				<li><a href="#" class="clone"><img src="<?php echo UNOSLIDER_PATH; ?>public/images/clone.png" alt="Clone" title="Clone" /></a></li>
+			</ul>
+
+				<br class="clear" />
+		</li>
+	</ul>
+
+
+	<!-- the main form -->
+	<form action="<?php echo admin_url('admin.php?page=unoslider&action=save'); ?>" method="POST" class='unoslider_new' >
+		<input type="hidden" name="id" id='unoslider_id' value="<?php echo isset($_GET['id']) ? $_GET['id'] : '' ?>" />
+
+		<!-- Slides Editor -->
+		<div id="main">
+			<div id="titlediv">
+				<label class="hide-if-no-js" id="title-prompt-text" for="title">Enter slider title here. e.g. Main Slider</label>
+				<input type="text" name="undr_title" id="title" value="<?php echo $this->name; ?>" />
+
+
+			</div>
+
+			<div class="drag_notice_area">
+				<div class="drag_notice">Drag and drop to reorder <a href="#" class="drag_close" title="Close" alt="Close">x</a></div>
+				<div class="arrow_down"></div>
+			</div>
+
+			<ul id="slides">
+
+				<?php
+				if(!empty($this->slides)){
+					$img_num = 0;
+					foreach($this->slides as $id => $slide){
+						if(preg_match("/(jpg|png|gif)$/", $slide)){
+							echo $this->partial('image_slide', array('slide' => $slide, 'id' => $id, 'img_num' => $img_num));
+							$img_num++;
+						}else{
+							echo $this->partial('html_slide', array('slide' => $slide, 'id' => $id));
+						}
+					}
+				}
+				?>
+
+				<li class="slide new"><a href="#" class="upload_image_button us-button-primary">Add New Image Slide</a> or <a href="#" class="open_html_editor us-button-primary">Add New HTML Slide</a></li>
+				</ul>
+		</div>
+
+		<!-- Options sidebar -->
+		<div class="inner-sidebar">
+
+			<!-- save/preview -->
+			<div class="postbox save">
+				<div class="inside">
+					<input type="submit" id="submit" class="us-button-done" value="Save this Slider" />
+					<a href="<?php echo admin_url( 'admin-ajax.php' ); ?>?action=unoslider_preview" id="preview" class="us-button">Preview this Slider</a>
+				</div>
+			</div>
+
+			<!-- Basic options -->
+			<div class="postbox">
+				<h3>Basic Options</h3>
+				<div class="inside">
+
+					<div class="row">
+						<div class="span7 offset3">
+							<label for="undr_width"><dfn title="Slider width">Width</dfn></label>
+							<div class="input-append">
+								<input type="text" class="span4" name="width" id="undr_width" value="<?php echo $this->width; ?>" />
+								<span class="add-on">px</span>
+							</div>
+						</div>
+
+						<div class="span1 offset3 x">x</div>
+
+						<div class="span7 offset3">
+							<label for="undr_height"><dfn title="Slider height">Height</dfn></label>
+							<div class="input-append">
+								<input type="text" class="span4" name="height" id="undr_height" value="<?php echo $this->height; ?>" />
+								<span class="add-on">px</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="row">
+						<div class="span12">
+							<label for="undr_scale"><input type="checkbox" name="undr_scale" id="undr_scale" <?php checked( $this->options['scale'], 1 ); ?> />
+								<dfn title="If checked, images are resized to the slider width and height">Scale slides</dfn>
+							</label>
+							<label for="undr_responsive"><input type="checkbox" name="undr_responsive" id="undr_responsive" <?php checked( $this->options['responsive'], 1 ); ?> />
+								<dfn title="The slider adjusts its width to the parent element width when the slider is wider then the parent element">Responsive</dfn>
+							</label>
+						</div>
+						<div class="span12">
+							<label for="undr_mobile"><input type="checkbox" name="undr_mobile" id="undr_mobile" <?php checked( $this->options['mobile'], 1 ); ?> />
+								<dfn title="Simpler, optimized transitions on mobile devices">Mobile optimized</dfn>
+							</label>
+							<label for="undr_touch"><input type="checkbox" name="undr_touch" id="undr_touch" <?php checked( $this->options['touch'], 1 ); ?> />
+								<dfn title="Enable touch controls on the mobile devices">Touch enabled</dfn>
+							</label>
+						</div>
+<!-- 						<div class="span24">
+							<label for="undr_responsive_layers"><input type="checkbox" name="undr_responsive_layers" id="undr_responsive_layers" <?php checked( $this->options['responsive_layers'], 1 ); ?> />
+								<dfn title="Make the animated layers responsive. <br> <br> Please NOTE that this is just a basic width, height and font size scaling. The resized text may not be readable on a smaller devices. For more advanced responsivennes you would need to create your own media queries.">Responsive Layers</dfn>
+							</label>
+						</div> -->
+					</div>
+
+
+					<label class="default"><dfn title="Slider graphic theme">Theme:</dfn> </label>
+					<select class="theme-selector" name="undr_theme" id="undr_theme">
+						<?php foreach($this->themes as $theme_id => $theme_val): ?>
+							<option value="<?php print $theme_id; ?>" <?php selected( $this->theme, $theme_id ); ?>><?php print $theme_val; ?></option>
+						<?php endforeach; ?>
+					</select>
+
+
+				</div>
+			</div>
+
+			<!-- Animation -->
+			<div class="postbox">
+				<h3>Transition</h3>
+				<div class="inside">
+
+ 					<ul class="tabs editor">
+						<li class="tab-transition <?php if(empty($this->presets)) echo 'active'; ?>"><a href="#sidebar-transition" data-toggle="tab">Custom Transition</a></li>
+						<li class="tab-presets <?php if(!empty($this->presets)) echo 'active'; ?>"><a href="#sidebar-presets" data-toggle="tab">Presets</a></li>
+					</ul>
+
+					<div class="tab-content">
+						<div class="tab-pane <?php if(!empty($this->presets)) echo 'active'; ?>" id="sidebar-presets">
+							<?php echo $this->partial('presets', array()); ?>
+						</div>
+						<div class="tab-pane <?php if(empty($this->presets)) echo 'active'; ?>" id="sidebar-transition">
+							<?php echo $this->partial('custom_transition', array()); ?>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Navigation -->
+			<div class="postbox">
+				<h3>Navigation</h3>
+				<div class="inside">
+
+					<div class="row">
+						<h4><dfn title="Display previous, next, play and pause controls">Controls</dfn></h4>
+
+						<p class="switch navigation" data-status="<?php print $this->empty_navigation ? 'disabled' : 'enabled' ?>">
+							<label class="enable" for="undr_navigation">Enabled</label>
+							<input type="checkbox" id="undr_navigation" class="checkbox" name="undr_navigation"  <?php checked( $this->empty_navigation, false ); ?>/>
+						</p>
+
+
+						<div id="slide-it-navigation" class="span25">
+							<div class="inline">
+								<label for="undr_play"><dfn title="Play button text">Play</dfn></label>
+								<input type="text" name="undr_play" id="undr_play" class="short" value="<?php echo $this->options['navigation']['play']; ?>" />
+								<label for="undr_navigation_autohide_play" class="padded"><input type="checkbox" name="undr_navigation_autohide[]" id="undr_navigation_autohide_play" value="play" <?php undr_checked( $this->navigation, 'play' ); ?> /> <dfn title="Show only on mouse hover">Autohide</dfn> </label>
+							</div>
+
+
+							<div class="inline">
+								<label for="undr_pause"><dfn title="Pause button text">Pause</dfn></label>
+								<input type="text" name="undr_pause" id="undr_pause" class="short" value="<?php echo $this->options['navigation']['stop']; ?>" />
+								<label for="undr_navigation_autohide_pause" class="padded"><input type="checkbox" name="undr_navigation_autohide[]" id="undr_navigation_autohide_pause" value="pause" <?php undr_checked( $this->navigation, 'pause' ); ?> /> <dfn title="Show only on mouse hover">Autohide</dfn> </label>
+							</div>
+
+							<div class="inline">
+								<label for="undr_next"><dfn title="Next button text">Next</dfn></label>
+								<input type="text" name="undr_next" id="undr_next" class="short" value="<?php echo $this->options['navigation']['next']; ?>" />
+								<label for="undr_navigation_autohide_next" class="padded"><input type="checkbox" name="undr_navigation_autohide[]" id="undr_navigation_autohide_next" value="right" <?php undr_checked( $this->navigation, 'right' ); ?> /> <dfn title="Show only on mouse hover">Autohide</dfn> </label>
+							</div>
+
+							<div class="inline">
+								<label for="undr_prev"><dfn title="Previous button text">Previous</dfn></label>
+								<input type="text" name="undr_prev" id="undr_prev" class="short" value="<?php echo $this->options['navigation']['prev']; ?>" />
+								<label for="undr_navigation_autohide_prev" class="padded"><input type="checkbox" name="undr_navigation_autohide[]" id="undr_navigation_autohide_prev" value="left" <?php undr_checked( $this->navigation, 'left' ); ?> /> <dfn title="Show only on mouse hover">Autohide</dfn> </label>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<h4>Bullet Indicator</h4>
+						<div class="span11">
+							<label for="undr_indicator"><input type="checkbox" name="undr_indicator" id="undr_indicator" <?php checked( $this->options['indicator'], array() ); ?> /> <dfn title="Display bullet indicator">Enable</dfn> </label>
+						</div>
+
+						<div class="span11">
+							<label for="undr_indicator_autohide"><input type="checkbox" name="undr_indicator_autohide" id="undr_indicator_autohide" <?php checked( $this->options['indicator']['autohide'], 1 ); ?> /> <dfn title="Show only on mouse hover">Autohide</dfn> </label>
+						</div>
+					</div>
+
+
+
+
+				</div>
+			</div>
+
+			<!-- Slideshow -->
+			<div class="postbox">
+				<h3>Slideshow</h3>
+				<div class="inside">
+
+					<p class="switch slideshow" data-status="<?php print $this->empty_slideshow ? 'disabled' : 'enabled' ?>">
+						<label class="enable" for="undr_slideshow">Enabled</label>
+						<input type="checkbox" id="undr_slideshow" class="checkbox" name="undr_slideshow"  <?php checked( $this->empty_slideshow, false ); ?>/>
+					</p>
+
+					<div id="slide-it-slideshow">
+						<div class="row">
+							<div class="span11">
+								<label for="undr_slideshow_autostart"><input type="checkbox" name="undr_slideshow_autostart" id="undr_slideshow_autostart" <?php checked( $this->options['slideshow']['autostart'], 1 ); ?> />
+									<dfn title="Slideshow starts running automatically after load">Autostart</dfn>
+								</label>
+								<label for="undr_slideshow_timer"><input type="checkbox" name="undr_slideshow_timer" id="undr_slideshow_timer" <?php checked( $this->options['slideshow']['timer'], 1 ); ?>  />
+									<dfn title="Display a small indicator of time remaining to the next slide change">Timer</dfn>
+								</label>
+								<label for="undr_slideshow_hoverPause"><input type="checkbox" name="undr_slideshow_hoverPause" id="undr_slideshow_hoverPause" <?php checked( $this->options['slideshow']['hoverPause'], 1 ); ?>  />
+									<dfn title="Pause slideshow on mouse over">Pause on hover</dfn>
+								</label>
+								<label for="undr_slideshow_continuous"><input type="checkbox" name="undr_slideshow_continuous" id="undr_slideshow_continuous" <?php checked( $this->options['slideshow']['continuous'], 1 ); ?>  />
+									<dfn title="Slideshow doesn't stop after a manual change of a slide">Continuous</dfn>
+								</label>
+								<label for="undr_slideshow_infinite"><input type="checkbox" name="undr_slideshow_infinite" id="undr_slideshow_infinite" <?php checked( $this->options['slideshow']['infinite'], 1 ); ?>  />
+									<dfn title="Slideshow continues in an infinite loop">Infinite</dfn>
+								</label>
+							</div>
+							<div class="span11">
+								<label for="undr_slideshow_speed">
+									<dfn title="Slides change interval">Speed</dfn>
+								</label>
+
+								<div class="input-append">
+									<input type="text" name="undr_slideshow_speed" id="undr_slideshow_speed" class="span3" value="<?php echo $this->options['slideshow']['speed']; ?>" />
+									<span class="add-on">sec.</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+	</div>
+
+	</form>
+</div>

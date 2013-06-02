@@ -1,0 +1,28 @@
+<div class="wrap">
+	<div id="icon-unoslider" class="icon32"><br/></div>
+	<h2 <?php if(isset($this->title['tabs'])){ echo 'class="nav-tab-wrapper"'; } ?>>
+		<span class="unsaved">Unsaved</span>
+
+		<?php if(isset($this->title['title'])): ?>
+			<span><?php echo $this->title['title']; ?></span>
+		<?php endif; ?>
+
+		<?php $i = 0; if(isset($this->title['tabs'])): foreach($this->title['tabs'] as $id => $tab): ?>
+			<a href="#<?php echo $id; ?>" class="nav-tab <?php if($i == 0) echo 'nav-tab-active'; ?>"><?php echo $tab; ?></a>	
+		<?php $i++; endforeach; endif; ?>
+
+
+		<?php if(isset($this->title['page'])): ?>
+			<a href="<?php echo admin_url('admin.php?page='.$this->title['page'].''); ?>" class="add-new-h2 <?php if(version_compare(WP_VERSION, '3.2') < 0) echo 'button'; ?>"><?php echo $this->title['link']; ?></a>
+		<?php endif; ?>
+		
+	</h2>
+	
+	<?php if(isset($this->notice)): ?>
+		<div class="error">
+			<p><?php echo $this->notice; ?></p>
+		</div>
+	<?php endif; ?> 
+		
+	<?php echo $this->content() ?>
+</div>

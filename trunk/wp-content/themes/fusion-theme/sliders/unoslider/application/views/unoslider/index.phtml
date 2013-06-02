@@ -1,0 +1,12 @@
+<form method="post">
+    <input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>" />
+    <?php $this->list_table->display() ?>
+</form>
+
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery('.delete a').click(function(){
+			return confirm('Are you sure?');
+		});
+	});
+</script>

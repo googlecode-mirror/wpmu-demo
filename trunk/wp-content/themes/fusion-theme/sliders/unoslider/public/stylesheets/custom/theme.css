@@ -1,0 +1,34 @@
+/* 
+ * Here you can crete your custom theme. 
+ * Make sure every rule is prefixed with the ".unoslider_theme_custom" class 
+ */
+
+/* The navigation container */
+.unoslider_theme_custom .unoslider_navigation_container {}
+
+/* All navigation elements (play, pause, prev and next)  */
+.unoslider_theme_custom .unoslider_navigation {}
+
+/* The caption */
+.unoslider_theme_custom .unoslider_caption {}
+
+/* Play, pause, previous and next elements */
+.unoslider_theme_custom .unoslider_pause {}
+.unoslider_theme_custom .unoslider_play {}
+.unoslider_theme_custom .unoslider_left {}
+.unoslider_theme_custom .unoslider_right {}
+
+.unoslider_theme_custom .unoslider_pause:hover {}
+.unoslider_theme_custom .unoslider_play:hover {}
+.unoslider_theme_custom .unoslider_left:hover {}
+.unoslider_theme_custom .unoslider_right:hover {}
+
+
+/* Bullet indicator container */
+.unoslider_theme_custom .unoslider_indicator {}
+
+/* Bullet indicator item */
+.unoslider_theme_custom .unoslider_indicator a {}
+
+/* Active bullet in the bullet indicator */
+.unoslider_theme_custom .unoslider_indicator a.unoslider_indicator_active {}

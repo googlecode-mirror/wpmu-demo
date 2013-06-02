@@ -1,0 +1,22 @@
+#optiontreeMessage{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    margin: 54px 0;
+    padding: 36px 0;
+    background: #d3dae0;
+    border: 1px solid #d7d7d7;
+    border-radius: 15px 15px 15px 15px;
+}
+#optiontreeMessage h2,
+#optiontreeMessage h1{
+    text-transform: none !important;
+    text-shadow: 1px 1px 1px #adb2b8;
+}
+#optiontreeMessage h1{
+    font-size: 36px !important;
+    margin-bottom: 9px !important;
+    color: #fff !important;
+}
+#optiontreeMessage h2{
+    font-size: 24px !important;
+    color: #fafafa !important;
+}

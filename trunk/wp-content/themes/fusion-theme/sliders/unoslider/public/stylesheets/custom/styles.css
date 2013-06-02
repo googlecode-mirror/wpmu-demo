@@ -1,0 +1,16 @@
+/**********************************
+ Custom animated layers styles
+ All styles MUST start with "unoslider_style_"
+ *********************************/
+
+/* Example of the "My Own" layer style */
+.unoslider_style_my_own{
+  border: 1px solid black;
+  color: orange;
+  background: gray;
+  padding: 10px;
+  font-size: 15px;
+  font-family: Helvetica, Verdana;
+  text-align: center;
+  line-height: 1em;
+}
