@@ -148,4 +148,51 @@ function attitude_core_functionality() {
  * Hooking some functions of functions.php file to this action hook.
  */
 do_action( 'attitude_init' );
+
+
+/**
+ * Function for load banner from main website
+ *
+ * query from wp_post : type -> announcements
+ * setting in main website backend
+ */
+function sap_display_announcement() {
+
+    global $wpdb;
+    //Select announcements, which start before and end after current date and those with empty dates
+    $sap_ids = $wpdb->get_results("SELECT `m1`.`post_id` FROM wp_postmeta `m1`
+                                   JOIN wp_postmeta `m2` ON `m1`.`post_id` = `m2`.`post_id`
+                                   WHERE
+                                   (`m1`.`meta_key` = 'sap_start_date' AND (UNIX_TIMESTAMP(`m1`.`meta_value`) < UNIX_TIMESTAMP() OR `m1`.`meta_value` = ''))
+                                   AND
+                                   (`m2`.`meta_key` = 'sap_end_date' AND (UNIX_TIMESTAMP(`m2`.`meta_value`) > UNIX_TIMESTAMP() OR `m2`.`meta_value` = ''))",
+        ARRAY_N);
+
+    if ($sap_ids){
+        foreach ($sap_ids as $id){
+            $post_id[] = $id[0];
+        }
+        $ids = implode(",",$post_id);
+
+        $announcements = $wpdb->get_results("SELECT * FROM wp_posts AS `posts` WHERE `posts`.`ID` IN (".$ids.")");
+
+    }
+
+    //HTML output
+    if($announcements) :
+        ?>
+        <div id="announcements" class="hidden">
+            <div class="sap_message">
+                <?php
+                foreach ($announcements as $announcement) {
+                    ?>
+                    <?php echo do_shortcode(wpautop(($announcement->post_content))); ?>
+                <?php
+                }
+                ?>
+            </div>
+        </div>
+    <?php
+    endif;
+}
 ?>
