@@ -56,4 +56,10 @@
 
 <div id="secondary">
 	<?php get_sidebar( 'right' ); ?>
+
+    <!--  Banner from main srikrung website.  -->
+    <div id="right_banner">
+        <?php echo sap_display_announcement(); ?>
+    </div>
+
 </div><!-- #secondary -->
