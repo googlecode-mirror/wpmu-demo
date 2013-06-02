@@ -15,8 +15,8 @@ GLOBAL STYLES
 Add styles beneath this line that you want to be applied across your entire site */
 
 body {
-    
-    background: #FFFFFF;
+
+    background-image: url("./images/bg_main.png");
     font-family: tahoma !important;
 }
 
