@@ -1,0 +1,11 @@
+/**********************************************************************************************************/
+/* Here you can add a custom CSS styles for your html slides, custom captions or other unoslider areas    */
+/**********************************************************************************************************/
+
+/* Example of the full width/height html slide background */
+.slide_bg_example{
+  background-color: #2e425a;
+  color: #bccbdc;
+  height: 100%;
+  width: 100%;
+}

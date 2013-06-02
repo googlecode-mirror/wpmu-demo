@@ -1,0 +1,53 @@
+<div class="transparent_bg">
+	<div class="canvas layers_canvas">
+	</div>
+</div>
+
+<a href="#" class="add-new-layer us-button-primary">Add new layer</a>
+
+<div id="html-blocks-area">
+	<ul id="layers-list"></ul>
+	
+	<div id="advanced_layer_editor" class="row">
+
+		<input type="hidden" id="layer_id">
+
+		<div class="span10">
+			<label for="layer_top">Top: </label>
+			<input type="text" id="layer_top" class="position">
+			<br>
+			<label for="layer_left">Left: </label>
+			<input type="text" id="layer_left" class="position">
+		</div>
+
+		<div class="span10">
+			<label for="layer_width">Width: </label>
+			<input type="text" id="layer_width" class="size">
+			<br>
+			<label for="layer_height">Height: </label>
+			<input type="text" id="layer_height" class="size">
+		</div>
+
+		<div class="span20">
+			<label for="layer_animation" class="bigger">Animation: </label>
+			<select name="" id="layer_animation">
+				<option value="fade">Fade</option>
+				<option value="slide_left">Slide to left</option>
+				<option value="slide_right">Slide to right</option>
+				<option value="slide_top">Slide to top</option>
+				<option value="slide_bottom">Slide to bottom</option>
+			</select>
+
+			<br>
+
+			<label for="layer_style" class="bigger">Style: </label>
+			<select name="" id="layer_style">
+				<?php foreach($styles as $value => $style): ?>					
+					<option value="<?php echo $value; ?>"><?php echo $style; ?></option>
+				<?php endforeach; ?>
+			</select>
+		</div>
+
+	</div>
+
+</div>

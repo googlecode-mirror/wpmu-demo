@@ -1,0 +1,30 @@
+<div class="row">
+	<div class="span24 offset2">
+		<div id="presets">
+			<ul id="presets_list">
+				<?php if(!empty($this->presets)): foreach($this->presets as $preset): ?>
+					<li data-preset-id="<?php echo $preset['id']; ?>" data-preset-name="<?php echo $preset['name']; ?>"><a href="#" class="preset_preview" title="Preview"></a><?php echo $preset['name']; ?><a href="#" class="preset_remove" title="Remove form this list">x</a></li>
+				<?php endforeach; endif; ?>
+			</ul>
+			<div class="hint">
+				Add a preset
+			</div>
+		</div>
+	</div>
+</div>
+
+<input type="hidden" value="<?php print($this->custom_presets); ?>" id="custom_presets_list">
+
+<div class="row">
+	<br>
+
+	<div class="span12 offset2 middle">
+		<label for="undr_presets_order"><input type="checkbox" name="undr_presets_order" id="undr_presets_order" <?php checked( $this->options['presets_order'], 1 ); ?>> 
+			<dfn title="Randomize presets order <br> (default is in order)">Random order</dfn>
+		</label>
+	</div>
+
+	<div class="class12">
+		<a href="#" class="create_new_preset us-button">Create new preset</a>
+	</div>
+</div>

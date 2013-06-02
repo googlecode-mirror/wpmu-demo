@@ -1,0 +1,46 @@
+<style type="text/css">
+	.CodeMirror {
+		border: 1px solid #eee;
+		margin-right: 220px;
+	}
+	.CodeMirror-scroll {
+		height: auto;
+		overflow-y: hidden;
+		overflow-x: auto;
+		width: 100%;
+	}
+</style>
+
+<?php $highlighted_id = isset($_GET['id']) ? $_GET['id'] : 'custom/custom' ?>
+<form action="<?php echo admin_url('admin.php?page=unoslider-css&action=save&id='.$highlighted_id.'&_r=1'); ?>" method="POST">
+	<div id="templateside">
+		<input type="submit" class="us-button-done <?php if(isset($this->notice)) echo 'disabled'; ?>" value="Save this CSS file" <?php if(isset($this->notice)) echo 'disabled'; ?>><br><br>
+		<h3>CSS Files</h3>
+		<ul>			
+			<?php $i = 0; if(isset($this->themes)): foreach($this->themes as $id => $tab): ?>
+				<li>
+					<a href="<?php echo admin_url('admin.php?page=unoslider-css&id='.$id); ?>">
+						<span <?php if($id == $highlighted_id) echo 'class="highlight"'; ?>><?php echo $tab['title']; ?> <br> 
+							<span class="nonessential"><?php echo $tab['desc']; ?></span>
+						</span>
+					</a>
+				</li>
+			<?php $i++; endforeach; endif; ?>    
+		</ul>
+	</div>
+	<br>
+	<textarea id="code" name="css_code" cols="100"><?php echo $this->css; ?></textarea>
+	<br>
+	<div class="colorbox-footer">
+		<div class="pull-left">
+			<input type="submit" class="us-button-done <?php if(isset($this->notice)) echo 'disabled'; ?>" <?php if(isset($this->notice)) echo 'disabled'; ?> value="Save this CSS file">
+		</div>
+	</div>
+</form>
+
+<script type="text/javascript">
+	var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+		lineNumbers: true,
+		theme: 'default'
+	});
+</script>

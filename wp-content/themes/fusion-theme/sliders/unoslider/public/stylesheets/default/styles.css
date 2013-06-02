@@ -1,0 +1,162 @@
+/**********************************
+ Custom animated layers styles
+ All styles MUST start with "unoslider_style_"
+ *********************************/
+
+/* New layer style */
+.unoslider_style_new{
+  border: 1px solid orange;
+  color: orange;
+  padding: 10px;
+  font-size: 15px;
+  font-family: Helvetica, Verdana;
+  text-align: center;
+  line-height: 1em;
+}
+
+.unoslider_style_big_dark_title{
+  color: #333;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: Helvetica, Verdana;
+  line-height: 1em;
+}
+
+.unoslider_style_big_light_title{
+  color: #fff;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: Helvetica, Verdana;
+  line-height: 1em;
+}
+
+/* Transparent style */
+.unoslider_style_transparent{
+  font-family: Helvetica, Verdana;
+  font-size: 12px;
+  line-height: 1em;
+}
+
+/* Dark style */
+.unoslider_style_dark{
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  line-height: 1em;
+  font-size: 12px;
+  font-family: Helvetica, Verdana;
+}
+
+/* Light style */
+.unoslider_style_light{
+  background: #fff;
+  color: #333;
+  padding: 10px;
+  line-height: 1em;
+  font-size: 12px;
+  font-family: Helvetica, Verdana;
+}
+
+/* Rounded Light style */
+.unoslider_style_circle_light{
+  background: #fff;
+  color: #333;
+  padding: 10px;
+  line-height: 1em;
+  font-size: 12px;
+  font-family: Helvetica, Verdana;
+  border-radius: 360px;
+  text-align: center;
+}
+
+/* Rounded Dark style */
+.unoslider_style_circle_dark{
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  line-height: 1em;
+  font-size: 12px;
+  font-family: Helvetica, Verdana;
+  border-radius: 360px;
+  text-align: center;
+}
+
+/* Slick style */
+.unoslider_style_slick{
+  text-align: center;
+  font-family: Helvetica, Verdana;
+  font-size: 12px;
+  line-height: 1em;
+  color: #6a6a6a;
+  padding: 5px;
+  border: 1px solid #fefefe;
+  background: #e5e5e5;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e5e5e5), color-stop(100%, #dbdbdb));
+  background: -webkit-linear-gradient(#e5e5e5, #dbdbdb);
+  background: -moz-linear-gradient(#e5e5e5, #dbdbdb);
+  background: -o-linear-gradient(#e5e5e5, #dbdbdb);
+  background: -ms-linear-gradient(#e5e5e5, #dbdbdb);
+  background: linear-gradient(#e5e5e5, #dbdbdb);
+  -moz-box-shadow: 0px 0px 2px black;
+  -webkit-box-shadow: 0px 0px 2px black;
+  -o-box-shadow: 0px 0px 2px black;
+  box-shadow: 0px 0px 2px black;
+  text-shadow: white 0px -1px 0px;
+}
+
+/* Modern style */
+.unoslider_style_modern{
+  text-align: center;
+  font-family: Helvetica, Verdana;
+  font-size: 12px;
+  line-height: 1em;
+  color: #d2d2d2;
+  padding: 5px;
+  border: 1px solid #141414;
+  background: #3f3f3f;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3f3f3f), color-stop(100%, #333));
+  background: -webkit-linear-gradient(#3f3f3f, #333);
+  background: -moz-linear-gradient(#3f3f3f, #333);
+  background: -o-linear-gradient(#3f3f3f, #333);
+  background: -ms-linear-gradient(#3f3f3f, #333);
+  background: linear-gradient(#3f3f3f, #333);
+  text-shadow: black 1px 1px 0px;
+  border-radius: 3px;
+}
+
+/* Important style */
+.unoslider_style_important{
+  text-align: center;
+  font-family: Helvetica, Verdana;
+  font-size: 12px;
+  line-height: 1em;
+  color: #ededed;
+  padding: 5px;
+  border: 1px solid #880000;
+  background: #940000;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #940000), color-stop(100%, #710000));
+  background: -webkit-linear-gradient(#940000, #710000);
+  background: -moz-linear-gradient(#940000, #710000);
+  background: -o-linear-gradient(#940000, #710000);
+  background: -ms-linear-gradient(#940000, #710000);
+  background: linear-gradient(#940000, #710000);
+}
+
+/* Call To Action style */
+.unoslider_style_call_to_action{
+  text-align: center;
+  font-family: Helvetica, Verdana;
+  font-size: 12px;
+  line-height: 1em;
+  font-weight: bold;
+  color: #ededed;
+  padding: 5px;
+  border: 1px solid #004f02;
+  background: #008603;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #008603), color-stop(100%, #007403));
+  background: -webkit-linear-gradient(#008603, #007403);
+  background: -moz-linear-gradient(#008603, #007403);
+  background: -o-linear-gradient(#008603, #007403);
+  background: -ms-linear-gradient(#008603, #007403);
+  background: linear-gradient(#008603, #007403);
+}
