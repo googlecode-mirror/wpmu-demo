@@ -209,6 +209,35 @@ To delete a comment, just log in and view the post&#039;s comments. There you wi
     $wpdb->insert( $wpdb->postmeta, array( 'post_id' => 2, 'meta_key' => '_wp_page_template', 'meta_value' => 'default' ) );
     // ----------- End create about Srikrung page.
 
+    /**
+     * =============== News and Promotion Page =================
+     * Show news and promotions page
+     * Page Title : ข่าวและโปรโมชั่น
+     * ======================================================
+     */
+    $first_page = '[srp widget_title=""]';
+    $first_post_guid = get_option('home') . '/?page_id=3';
+    $wpdb->insert( $wpdb->posts, array(
+        'post_author' => $user_id,
+        'post_date' => $now,
+        'post_date_gmt' => $now_gmt,
+        'post_content' => $first_page,
+        'post_excerpt' => '',
+        'post_title' => __( 'ข่าวและโปรโมชั่น' ),
+        /* translators: Default page slug */
+        'post_name' => sanitize_title( _x('ข่าวและโปรโมชั่น', 'Default post slug') ),
+        'post_modified' => $now,
+        'post_modified_gmt' => $now_gmt,
+        'guid' => $first_post_guid,
+        'post_type' => 'page',
+        'to_ping' => '',
+        'pinged' => '',
+        'post_content_filtered' => '',
+        'comment_status' => 'closed'
+    ));
+    $wpdb->insert( $wpdb->postmeta, array( 'post_id' => 3, 'meta_key' => '_wp_page_template', 'meta_value' => 'default' ) );
+    // ----------- End create about Srikrung page.
+
 
 	// Set up default widgets for default theme.
 	update_option( 'widget_search', array ( 2 => array ( 'title' => '' ), '_multiwidget' => 1 ) );
