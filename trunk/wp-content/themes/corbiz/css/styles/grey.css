@@ -1,0 +1,54 @@
+
+/* ----------------------- GENERAL LAYOUT -----------------------*/
+.header-wrapper{
+  background-color:#888888;
+}
+.header-wrapper-inner {
+  background-color:#888888;
+}
+#slideshow,
+#pageheading {
+  border-top: 2px solid #888888;
+}
+/* links */
+a,a:link,a:visited {
+  color:#555555;
+  text-decoration:none;
+}
+a:hover{
+  color:#555555;
+}
+a img, img {
+  border:none
+}
+a.button{
+  color: #858585;
+}
+a.button:hover {
+  color: #555555;
+}
+
+.content-list h4,
+.content-list h5{
+  color: #888888;
+  margin-bottom: 10px;
+}
+h4.sidebox-heading {
+  color: #888888;
+}
+.sidebox-content ul  li a {
+  color: #787878; 
+}
+.sidebox-content ul  li a:hover {
+  color: #888888; 
+}
+.jqueryslidemenu ul li a:hover,
+.jqueryslidemenu ul li ul li a:hover  {
+  color: #888888; /*tab link background during hover state*/
+}
+.jqueryslidemenu ul li.selected a,
+.jqueryslidemenu ul li.current_page_item a, .jqueryslidemenu ul li.current_page_parent a,
+.jqueryslidemenu ul li.current-menu-parent a,.jqueryslidemenu ul li.current-page-ancestor a{
+  background: #888888;
+  color: #ffffff;
+}
