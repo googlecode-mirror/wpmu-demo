@@ -236,7 +236,7 @@ To delete a comment, just log in and view the post&#039;s comments. There you wi
         'comment_status' => 'closed'
     ));
     $wpdb->insert( $wpdb->postmeta, array( 'post_id' => 3, 'meta_key' => '_wp_page_template', 'meta_value' => 'default' ) );
-    // ----------- End create about Srikrung page.
+    // ----------- End create news/promotions page.
 
 
 	// Set up default widgets for default theme.
