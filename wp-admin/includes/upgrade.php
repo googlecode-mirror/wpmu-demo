@@ -181,42 +181,13 @@ To delete a comment, just log in and view the post&#039;s comments. There you wi
 
 
     /**
-     * =============== About Srikrung Page =================
-     * Statis page created when create new multisite.
-     * Page Title : เกี่ยวกับศรีกรุงโปรคเกอร์
-     * ======================================================
-     */
-    $first_page = '<img class="aligncenter size-full wp-image-412" alt="SK Bio For Web-01" src="http://localhost/srikrung/wp-content/uploads/2013/06/SK-Bio-For-Web-011.jpg" width="800" height="600" />';
-    $first_post_guid = get_option('home') . '/?page_id=2';
-    $wpdb->insert( $wpdb->posts, array(
-        'post_author' => $user_id,
-        'post_date' => $now,
-        'post_date_gmt' => $now_gmt,
-        'post_content' => $first_page,
-        'post_excerpt' => '',
-        'post_title' => __( 'รู้จักศรีกรุงโปรคเกอร์' ),
-        /* translators: Default page slug */
-        'post_name' => sanitize_title( _x('รู้จักศรีกรุงโปรคเกอร์', 'Default post slug') ),
-        'post_modified' => $now,
-        'post_modified_gmt' => $now_gmt,
-        'guid' => $first_post_guid,
-        'post_type' => 'page',
-        'to_ping' => '',
-        'pinged' => '',
-        'post_content_filtered' => '',
-        'comment_status' => 'closed'
-    ));
-    $wpdb->insert( $wpdb->postmeta, array( 'post_id' => 2, 'meta_key' => '_wp_page_template', 'meta_value' => 'default' ) );
-    // ----------- End create about Srikrung page.
-
-    /**
      * =============== News and Promotion Page =================
      * Show news and promotions page
      * Page Title : ข่าวและโปรโมชั่น
      * ======================================================
      */
     $first_page = '[srp widget_title=""]';
-    $first_post_guid = get_option('home') . '/?page_id=3';
+    $first_post_guid = get_option('home') . '/?page_id=2';
     $wpdb->insert( $wpdb->posts, array(
         'post_author' => $user_id,
         'post_date' => $now,
@@ -235,8 +206,66 @@ To delete a comment, just log in and view the post&#039;s comments. There you wi
         'post_content_filtered' => '',
         'comment_status' => 'closed'
     ));
-    $wpdb->insert( $wpdb->postmeta, array( 'post_id' => 3, 'meta_key' => '_wp_page_template', 'meta_value' => 'default' ) );
+    $wpdb->insert( $wpdb->postmeta, array( 'post_id' => 2, 'meta_key' => '_wp_page_template', 'meta_value' => 'default' ) );
     // ----------- End create news/promotions page.
+
+    /**
+     * =============== About Srikrung Page =================
+     * Statis page created when create new multisite.
+     * Page Title : เกี่ยวกับศรีกรุงโปรคเกอร์
+     * ======================================================
+     */
+    $first_page = '<img class="aligncenter size-full wp-image-412" alt="SK Bio For Web-01" src="http://localhost/srikrung/wp-content/uploads/2013/06/SK-Bio-For-Web-011.jpg" width="800" height="600" />';
+    $first_post_guid = get_option('home') . '/?page_id=3';
+    $wpdb->insert( $wpdb->posts, array(
+        'post_author' => $user_id,
+        'post_date' => $now,
+        'post_date_gmt' => $now_gmt,
+        'post_content' => $first_page,
+        'post_excerpt' => '',
+        'post_title' => __( 'รู้จักศรีกรุงโปรคเกอร์' ),
+        /* translators: Default page slug */
+        'post_name' => sanitize_title( _x('รู้จักศรีกรุงโปรคเกอร์', 'Default post slug') ),
+        'post_modified' => $now,
+        'post_modified_gmt' => $now_gmt,
+        'guid' => $first_post_guid,
+        'post_type' => 'page',
+        'to_ping' => '',
+        'pinged' => '',
+        'post_content_filtered' => '',
+        'comment_status' => 'closed'
+    ));
+    $wpdb->insert( $wpdb->postmeta, array( 'post_id' => 3, 'meta_key' => '_wp_page_template', 'meta_value' => 'default' ) );
+    // ----------- End create about Srikrung page.
+
+    /**
+     * =============== Contact us Page =================
+     * Show news and promotions page
+     * Page Title : ติดต่อเรา
+     * ======================================================
+     */
+    $first_page = '';
+    $first_post_guid = get_option('home') . '/?page_id=4';
+    $wpdb->insert( $wpdb->posts, array(
+        'post_author' => $user_id,
+        'post_date' => $now,
+        'post_date_gmt' => $now_gmt,
+        'post_content' => $first_page,
+        'post_excerpt' => '',
+        'post_title' => __( 'ติดต่อเรา' ),
+        /* translators: Default page slug */
+        'post_name' => sanitize_title( _x('ติดต่อเรา', 'Default post slug') ),
+        'post_modified' => $now,
+        'post_modified_gmt' => $now_gmt,
+        'guid' => $first_post_guid,
+        'post_type' => 'page',
+        'to_ping' => '',
+        'pinged' => '',
+        'post_content_filtered' => '',
+        'comment_status' => 'closed'
+    ));
+    $wpdb->insert( $wpdb->postmeta, array( 'post_id' => 4, 'meta_key' => '_wp_page_template', 'meta_value' => 'contact.php' ) );
+    // ----------- End create Contact us page.
 
 
 	// Set up default widgets for default theme.
