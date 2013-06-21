@@ -95,7 +95,7 @@ if(!isset($hide_header) OR !$hide_header)
     	    
     	    	<div class="content">
                     <!--  Banner from main srikrung website.  -->
-    	            <div id="sidebar_banner">
+    	            <div id="sidebar_banner" style="padding: 20px">
                         <?php echo sap_display_announcement(); ?>
     	            </div>
     	    		<ul class="sidebar_widget">

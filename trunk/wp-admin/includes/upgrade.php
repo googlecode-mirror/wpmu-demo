@@ -206,7 +206,7 @@ To delete a comment, just log in and view the post&#039;s comments. There you wi
         'post_content_filtered' => '',
         'comment_status' => 'closed'
     ));
-    $wpdb->insert( $wpdb->postmeta, array( 'post_id' => 2, 'meta_key' => '_wp_page_template', 'meta_value' => 'default' ) );
+    $wpdb->insert( $wpdb->postmeta, array( 'post_id' => 2, 'meta_key' => '_wp_page_template', 'meta_value' => 'page_r.php' ) );
     // ----------- End create news/promotions page.
 
     /**
