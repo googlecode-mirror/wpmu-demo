@@ -117,7 +117,7 @@ if ( ! function_exists( 'woo_load_responsive_meta_tags' ) ) {
 
 		/* Remove this if not responsive design */
 		$html .= "\n" . '<!--  Mobile viewport scale | Disable user zooming as the layout is optimised -->' . "\n";
-		$html .= '<meta content="initial-scale=1.0; maximum-scale=1.0; user-scalable=no" name="viewport"/>' . "\n";
+		$html .= '<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />' . "\n";
 
 		echo $html;
 	} // End woo_load_responsive_meta_tags()
