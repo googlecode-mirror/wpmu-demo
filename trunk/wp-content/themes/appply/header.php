@@ -51,6 +51,15 @@ wp_enqueue_script( 'bxSlider' );
            slideMargin: 20,
            pager: false,
        });
+
+       jQuery('.insurance-slider').bxSlider({
+           slideWidth: 185,
+           minSlides: 2,
+           maxSlides: 4,
+           moveSlides: 1,
+           slideMargin: 20,
+           pager: false,
+       });
     });
 </script>
 <div id="top-login-bar" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/images/top_login_bar.png' ); ?>); height: 37px;">
