@@ -54,6 +54,29 @@ if ( ! defined( 'ABSPATH' ) ) exit;
             </div>
         </div>
 
+        <div id="insurance-recommend">
+            <div class="insurance-slider">
+                <?php
+                $args = array('post_type' => 'product',
+                    'posts_per_page' => 12,
+                    'meta_key' => '_featured',
+                    'meta_value' => 'yes'
+                );
+                $loop = new WP_Query( $args );
+                if ( $loop->have_posts() ) {
+                    while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                        <div class="slide">
+                            <div class="product-photo"><a href="<?php echo $loop->post->guid ?>"><?php echo $product->get_image() ?></a></div>
+                            <div class="product-name"><a href="<?php echo $loop->post->guid ?>"><?php echo $product->get_title() ?></a></div>
+                        </div>
+                    <?php endwhile;
+                } else {
+                    echo __( 'No insurance found' );
+                }
+                ?>
+            </div>
+        </div>
+
         <div id="agent-recommend">
             <div class="agent-slider">
                 <?php

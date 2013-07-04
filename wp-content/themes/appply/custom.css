@@ -167,6 +167,14 @@ body {
     height: 252px;
 }
 
+#insurance-recommend
+{
+    margin:  20px 15px;
+    background-image: url("images/insuranceRecommentFrame.png");
+    background-repeat: no-repeat;
+    height: 252px;
+}
+
 #agent-recommend
 {
     margin: 30px 15px ;
@@ -265,7 +273,7 @@ div#agent-recommend .bx-viewport {
 }
 div#agent-recommend .bx-wrapper .bx-prev {
     left: -30px;
-    background: url(images/buttons/preview_green_bt_06.png) no-repeat;
+    background: url(images/buttons/previous_green_bt.png) no-repeat;
 }
 div#agent-recommend .bx-wrapper .bx-next {
     right: -60px;
@@ -314,7 +322,7 @@ div#product-recommend .bx-viewport {
 }
 div#product-recommend .bx-wrapper .bx-prev {
     left: -30px;
-    background: url(images/buttons/preview_orange_bt_03.png) no-repeat;
+    background: url(images/buttons/previous_orange_bt.png) no-repeat;
 }
 div#product-recommend .bx-wrapper .bx-next {
     right: -60px;
@@ -331,6 +339,54 @@ div#product-recommend .bx-wrapper .bx-next {
     z-index: 9999;
 }
 
+/* insurance slide styles */
+div.insurance-slider div.slide {
+}
+div.insurance-slider div.product-photo {
+    width: 185px;
+    height: 120px;
+    box-shadow: 2px 2px 5px #888888;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+div.insurance-slider div.product-photo img {
+    margin-top: 13px;
+}
+div.insurance-slider div.product-name {
+    font-size: 12px;
+    /*font-weight: bold;*/
+    text-align: center;
+    margin-top: 5px;
+}
+div.insurance-slider div.product-name a {
+    color: #e9232c !important;
+}
+div#insurance-recommend .bx-wrapper {
+    position: absolute;
+    margin-top: 65px;
+    margin-left: 55px;
+}
+div#insurance-recommend .bx-viewport {
+    padding: 10px;
+}
+div#insurance-recommend .bx-wrapper .bx-prev {
+    left: -30px;
+    background: url(images/buttons/previous_red_bt.png) no-repeat;
+}
+div#insurance-recommend .bx-wrapper .bx-next {
+    right: -60px;
+    background: url(images/buttons/next_red_bt.png) no-repeat;
+}
+.bx-wrapper .bx-controls-direction a {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    outline: 0;
+    width: 32px;
+    height: 32px;
+    text-indent: -9999px;
+    z-index: 9999;
+}
 
 /* 
 DESKTOP STYLES
