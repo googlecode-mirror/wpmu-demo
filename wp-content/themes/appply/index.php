@@ -35,6 +35,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
             <div class="product-slider">
                 <?php
                 $args = array('post_type' => 'product',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'product_cat',
+                            'field' => 'slug',
+                            'terms' => 'กรมธรรม์',
+                            'operator' => 'NOT IN'
+                        )
+                    ),
                     'posts_per_page' => 12,
                     'meta_key' => '_featured',
                     'meta_value' => 'yes'
@@ -59,6 +67,13 @@ if ( ! defined( 'ABSPATH' ) ) exit;
                 <?php
                 $args = array('post_type' => 'product',
                     'posts_per_page' => 12,
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'product_cat',
+                            'field' => 'slug',
+                            'terms' => 'กรมธรรม์'
+                        )
+                    ),
                     'meta_key' => '_featured',
                     'meta_value' => 'yes'
                 );
