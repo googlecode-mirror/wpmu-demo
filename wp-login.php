@@ -407,7 +407,8 @@ case 'logout' :
 	check_admin_referer('log-out');
 	wp_logout();
 
-	$redirect_to = !empty( $_REQUEST['redirect_to'] ) ? $_REQUEST['redirect_to'] : 'wp-login.php?loggedout=true';
+//	$redirect_to = !empty( $_REQUEST['redirect_to'] ) ? $_REQUEST['redirect_to'] : 'wp-login.php?loggedout=true';
+    $redirect_to = get_home_url();
 	wp_safe_redirect( $redirect_to );
 	exit();
 
