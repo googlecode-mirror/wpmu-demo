@@ -572,6 +572,13 @@ break;
 
 case 'login' :
 default:
+
+    if(empty($_POST['log']) or empty($_POST['pwd'])) {
+        $redirect_to = get_home_url() . '/login';
+        wp_safe_redirect($redirect_to);
+        exit();
+    }
+
 	$secure_cookie = '';
 	$interim_login = isset($_REQUEST['interim-login']);
 	$customize_login = isset( $_REQUEST['customize-login'] );
