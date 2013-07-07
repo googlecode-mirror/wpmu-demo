@@ -75,7 +75,7 @@ wp_enqueue_script( 'bxSlider' );
             </form>
                 <input type="image" class="submit-btn" style="vertical-align: bottom" src="<?php echo esc_url(get_template_directory_uri() . '/images/buttons/apple_member.png'); ?>" onclick="window.location.href = '<?php echo get_site_url() ?>/signup';"/>
             <?php else :?>
-            <span id="welcome-msg">ยินดีต้อนรับ :<a href="http://localhost/srikrung/my-account/"> <?php  echo wp_get_current_user()->user_firstname  ?></a></span>
+            <span id="welcome-msg">ยินดีต้อนรับ :<a href="<?php echo get_home_url() ?>/my-account/"> <?php  echo wp_get_current_user()->user_firstname  ?></a></span>
             <span>(<a href="<?php echo wp_logout_url() ?>">Logout</a>)</span>
             <?php endif ?>
         </div>
