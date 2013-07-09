@@ -573,7 +573,7 @@ break;
 case 'login' :
 default:
 
-    if(empty($_POST['log']) or empty($_POST['pwd'])) {
+    if((empty($_POST['log']) or empty($_POST['pwd'])) and $_POST['login-from']=='homepage') {
         $redirect_to = get_home_url() . '/login';
         wp_safe_redirect($redirect_to);
         exit();
