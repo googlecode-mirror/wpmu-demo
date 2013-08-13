@@ -69,9 +69,18 @@ function get_user_from_agent_no($agent_no) {
         return $a;
 }
 
-
-
-
+/**
+ * Function : disable_woocommerce_product_tabs()
+ * use for disable review and description tabs on product page.
+ *
+ */
+add_filter( 'woocommerce_product_tabs', 'custom_woo_remove_reviews_tab', 98);
+function custom_woo_remove_reviews_tab($tabs) {
+    unset($tabs['reviews']);
+    unset($tabs['description']);
+    unset($tabs['additional_information']);
+    return $tabs;
+}
 
 
 
