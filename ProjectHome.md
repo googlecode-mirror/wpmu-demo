@@ -1,0 +1,1 @@
+this is the sample project with wordpress multisite.
